@@ -93,4 +93,54 @@ const (
 
 	// TagIOIRefID - Reference identifier used with CANCEL and REPLACE, transaction types.
 	TagIOIRefID
+
+	// TagIOIShares - Number of shares in numeric or relative size.
+	TagIOIShares
+
+	// TagIOITransType - Identifies IOI message transaction type
+	TagIOITransType
+
+	// TagLastCapacity - Broker capacity in order execution
+	TagLastCapacity
+
+	// TagLastMkt - Market of execution for last fill
+	TagLastMkt
+
+	// TagLastPx - Price of this (last) fill. Field not required for ExecTransType (20) ='3' (Status)
+	TagLastPx
+
+	// TagLastShares - Quantity of shares bought/sold on this (last) fill. Field not required for ExecTransType (20)
+	// ='3' (Status)
+	TagLastShares
+
+	// TagLinesOfText - Identifies number of lines of text body
+	TagLinesOfText
+
+	// TagMsgSeqNum - Integer message sequence number.
+	TagMsgSeqNum
+
+	// TagMsgType - Defines message type. Always third field in message. Always unencrypted.
+	//
+	// The value is case-sensitive.
+	//
+	// "U" as the first character of the value (e.g. U1, U2) indicates that the message format is privately defined between the sender and receiver.
+	TagMsgType
+
+	// TagNewSeqNo - New sequence number
+	TagNewSeqNo
+
+	// TagOrderID - Unique identifier for Order as assigned by broker. Uniqueness must be guaranteed within a single
+	// trading day. Firms which accept multi-day orders should consider embedding a date within the OrderID (37) field
+	// to assure uniqueness across days.
+	TagOrderID
+
+	// TagOrderQty - Number of shares ordered. This represents the number of shares for equities or based on normal
+	// convention the number of contracts for options, futures, convertible bonds, etc.
+	TagOrderQty
+
+	// TagOrdStatus - Identifies current status of order.
+	TagOrdStatus
+
+	// TagOrdType - Order type.
+	TagOrdType
 )
