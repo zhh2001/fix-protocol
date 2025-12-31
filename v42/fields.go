@@ -123,7 +123,8 @@ const (
 	//
 	// The value is case-sensitive.
 	//
-	// "U" as the first character of the value (e.g. U1, U2) indicates that the message format is privately defined between the sender and receiver.
+	// "U" as the first character of the value (e.g. U1, U2) indicates that the message format is privately defined
+	// between the sender and receiver.
 	TagMsgType
 
 	// TagNewSeqNo - New sequence number
