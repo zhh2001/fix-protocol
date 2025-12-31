@@ -143,4 +143,32 @@ const (
 
 	// TagOrdType - Order type.
 	TagOrdType
+
+	// TagOrigClOrdID - ClOrdID (11) of the previous order (NOT the initial order of the day) as assigned by the
+	// institution, used to identify the previous order in cancel and cancel/replace requests.
+	TagOrigClOrdID
+
+	// TagOrigTime - Time of message origination (always expressed in UTC (Universal Time Coordinated, also known as
+	// 'GMT'))
+	TagOrigTime
+
+	// TagPossDupFlag - Indicates possible retransmission of message with this sequence number
+	TagPossDupFlag
+
+	// TagPrice - Price per share
+	TagPrice
+
+	// TagRefSeqNum - Reference message sequence number
+	TagRefSeqNum
+
+	// TagRelatdSym - Symbol of issue related to story. Can be repeated within message to identify multiple companies.
+	TagRelatdSym
+
+	// TagRule80A - Note that the name of this field is changing to 'OrderCapacity' as Rule80A is a very US
+	// market-specific term. Other world markets need to convey similar information, however, often a subset of the US
+	// values.
+	TagRule80A
+
+	// TagSecurityID - CUSIP or other alternate security identifier
+	TagSecurityID
 )
