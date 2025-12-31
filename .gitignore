@@ -1,0 +1,30 @@
+*
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.o
+*.a
+go.sum.bak
+
+# VS Code
+.vscode/
+*.code-workspace
+# GoLand/IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+# Vim
+*.swp
+*.swo
+
+logs/
+*.log
+*.tmp
+*.bak
+*.cache
+
+.env
+.env.*
