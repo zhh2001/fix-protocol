@@ -172,4 +172,23 @@ const (
 
 	// TagSecurityID - CUSIP or other alternate security identifier
 	TagSecurityID
+
+	// TagSenderCompID - Assigned value used to identify firm sending message.
+	TagSenderCompID
+
+	// TagSenderSubID - Assigned value used to identify specific message originator (desk, trader, etc.)
+	TagSenderSubID
+
+	// TagSendingDate - No longer used. Included here for reference to prior versions.
+	TagSendingDate
+
+	// TagSendingTime - Time of message transmission (always expressed in UTC (Universal Time Coordinated, also known as
+	// 'GMT')
+	TagSendingTime
+
+	// TagShares - Number of shares
+	TagShares
+
+	// TagSide - Side of order
+	TagSide
 )

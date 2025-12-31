@@ -58,6 +58,12 @@ func TestTagValues(t *testing.T) {
 		{"TagRelatdSym", TagRelatdSym, 46},
 		{"TagRule80A", TagRule80A, 47},
 		{"TagSecurityID", TagSecurityID, 48},
+		{"TagSenderCompID", TagSenderCompID, 49},
+		{"TagSenderSubID", TagSenderSubID, 50},
+		{"TagSendingDate", TagSendingDate, 51},
+		{"TagSendingTime", TagSendingTime, 52},
+		{"TagShares", TagShares, 53},
+		{"TagSide", TagSide, 54},
 	}
 
 	for _, tc := range testCases {
