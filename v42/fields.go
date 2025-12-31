@@ -1,10 +1,8 @@
 package fields
 
-type Tag int
-
 const (
 	// TagAccount - Account mnemonic as agreed between broker and institution.
-	TagAccount Tag = iota + 1
+	TagAccount = iota + 1
 
 	// TagAdvId - Unique identifier of Advertisement <35=7> message.
 	TagAdvId
