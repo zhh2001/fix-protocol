@@ -81,4 +81,16 @@ const (
 
 	// TagIDSource - Identifies class of alternative SecurityID (48)
 	TagIDSource
+
+	// TagIOIid - Unique identifier of Indication of Interest <35=6> message.
+	TagIOIid
+
+	// TagIOIOthSvc - No longer used as of FIX 4.2.
+	TagIOIOthSvc
+
+	// TagIOIQltyInd - Relative quality of indication
+	TagIOIQltyInd
+
+	// TagIOIRefID - Reference identifier used with CANCEL and REPLACE, transaction types.
+	TagIOIRefID
 )
