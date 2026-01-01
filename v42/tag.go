@@ -191,4 +191,39 @@ const (
 
 	// TagSide - Side of order
 	TagSide
+
+	// TagSymbol - Ticker symbol
+	TagSymbol
+
+	// TagTargetCompID - Assigned value used to identify receiving firm.
+	TagTargetCompID
+
+	// TagTargetSubID - Assigned value used to identify specific individual or unit intended to receive message. 'ADMIN'
+	// reserved for administrative messages not intended for a specific user.
+	TagTargetSubID
+
+	// TagText - Free format text string
+	TagText
+
+	// TagTimeInForce - Specifies how long the order remains in effect. Absence of this field is interpreted as DAY.
+	TagTimeInForce
+
+	// TagTransactTime - Time of execution/order creation (expressed in UTC (Universal Time Coordinated, also known as
+	// 'GMT')
+	TagTransactTime
+
+	// TagUrgency - Urgency flag
+	TagUrgency
+
+	// TagValidUntilTime - Indicates expiration time of indication message (always expressed in UTC (Universal Time
+	// Coordinated, also known as 'GMT')
+	TagValidUntilTime
+
+	// TagSettlmntTyp - Indicates order settlement period. Absence of this field is interpreted as Regular. Regular is
+	// defined as the default settlement period for the particular security on the exchange of execution.
+	TagSettlmntTyp
+
+	// TagFutSettDate - Specific date of trade settlement (SettlementDate) in YYYYMMDD format. Required when SettlmntTyp
+	// (63) = '6' (Future) or SettlmntTyp (63) = '8' (Sellers Option). (expressed in local time at place of settlement)
+	TagFutSettDate
 )
