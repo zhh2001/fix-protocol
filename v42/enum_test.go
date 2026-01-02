@@ -209,6 +209,13 @@ func TestSideEnumValues(t *testing.T) {
 		{"SettlmntTypWhenIssued", SettlmntTypWhenIssued, "7"},
 		{"SettlmntTypSellersOption", SettlmntTypSellersOption, "8"},
 		{"SettlmntTypT5", SettlmntTypT5, "9"},
+
+		{"AllocTransTypeNew", AllocTransTypeNew, "0"},
+		{"AllocTransTypeReplace", AllocTransTypeReplace, "1"},
+		{"AllocTransTypeCancel", AllocTransTypeCancel, "2"},
+		{"AllocTransTypePreliminary", AllocTransTypePreliminary, "3"},
+		{"AllocTransTypeCalculated", AllocTransTypeCalculated, "4"},
+		{"AllocTransTypeCalculatedWithoutPreliminary", AllocTransTypeCalculatedWithoutPreliminary, "5"},
 	}
 
 	// Run each test case

@@ -256,3 +256,13 @@ const (
 	SettlmntTypSellersOption = "8" // Sellers Option
 	SettlmntTypT5            = "9" // T+5
 )
+
+// AllocTransType
+const (
+	AllocTransTypeNew                          = "0" // New
+	AllocTransTypeReplace                      = "1" // Replace
+	AllocTransTypeCancel                       = "2" // Cancel
+	AllocTransTypePreliminary                  = "3" // Preliminary (without MiscFees and NetMoney)
+	AllocTransTypeCalculated                   = "4" // Calculated (includes MiscFees and NetMoney)
+	AllocTransTypeCalculatedWithoutPreliminary = "5" // Calculated without Preliminary (sent unsolicited by broker, includes MiscFees and NetMoney)
+)
