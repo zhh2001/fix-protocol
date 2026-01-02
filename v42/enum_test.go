@@ -219,6 +219,14 @@ func TestSideEnumValues(t *testing.T) {
 		{"AllocTransTypePreliminary", AllocTransTypePreliminary, "3"},
 		{"AllocTransTypeCalculated", AllocTransTypeCalculated, "4"},
 		{"AllocTransTypeCalculatedWithoutPreliminary", AllocTransTypeCalculatedWithoutPreliminary, "5"},
+
+		{"ProcessCodeRegular", ProcessCodeRegular, "0"},
+		{"ProcessCodeSoftDollar", ProcessCodeSoftDollar, "1"},
+		{"ProcessCodeStepIn", ProcessCodeStepIn, "2"},
+		{"ProcessCodeStepOut", ProcessCodeStepOut, "3"},
+		{"ProcessCodeSoftDollarStepIn", ProcessCodeSoftDollarStepIn, "4"},
+		{"ProcessCodeSoftDollarStepOut", ProcessCodeSoftDollarStepOut, "5"},
+		{"ProcessCodePlanSponsor", ProcessCodePlanSponsor, "6"},
 	}
 
 	// Run each test case

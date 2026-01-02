@@ -272,3 +272,14 @@ const (
 	AllocTransTypeCalculated                   = "4" // Calculated (includes MiscFees and NetMoney)
 	AllocTransTypeCalculatedWithoutPreliminary = "5" // Calculated without Preliminary (sent unsolicited by broker, includes MiscFees and NetMoney)
 )
+
+// ProcessCode
+const (
+	ProcessCodeRegular           = "0" // regular
+	ProcessCodeSoftDollar        = "1" // soft dollar
+	ProcessCodeStepIn            = "2" // step-in
+	ProcessCodeStepOut           = "3" // step-out
+	ProcessCodeSoftDollarStepIn  = "4" // soft-dollar step-in
+	ProcessCodeSoftDollarStepOut = "5" // soft-dollar step-out
+	ProcessCodePlanSponsor       = "6" // plan sponsor
+)

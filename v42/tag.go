@@ -284,4 +284,23 @@ const (
 
 	// TagAllocShares - Number of shares to be allocated to specific sub-account
 	TagAllocShares
+
+	// TagProcessCode - Processing code for sub-account. Absence of this field in AllocAccount (79) /
+	// AllocPrice (366)/AllocShares (80) / ProcessCode (81) instance indicates regular trade.
+	TagProcessCode
+
+	// TagNoRpts - Total number of reports within series.
+	TagNoRpts
+
+	// TagRptSeq - Sequence number of message within report series.
+	TagRptSeq
+
+	// TagCxlQty - Total number of shares canceled for this order.
+	TagCxlQty
+
+	// TagNoDlvyInst - Number of delivery instruction fields to follow
+	TagNoDlvyInst
+
+	// TagDlvyInst - Free format text field to indicate delivery instructions
+	TagDlvyInst
 )
