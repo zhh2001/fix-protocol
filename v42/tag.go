@@ -411,4 +411,41 @@ const (
 
 	// TagSettlCurrency - Currency code of settlement denomination.
 	TagSettlCurrency
+
+	// TagForexReq - Indicates request for forex accommodation trade to be executed along with security transaction.
+	TagForexReq
+
+	// TagOrigSendingTime - Original time of message transmission (always expressed in UTC (Universal Time Coordinated,
+	// also known as 'GMT') when transmitting orders as the result of a resend request.
+	TagOrigSendingTime
+
+	// TagGapFillFlag - Indicates that the Sequence Reset <35=4> message is replacing administrative or application
+	// messages which will not be resent.
+	TagGapFillFlag
+
+	// TagNoExecs - No of execution repeating group entries to follow.
+	TagNoExecs
+
+	// TagCxlType - No longer used. Included here for reference to prior versions.
+	TagCxlType
+
+	// TagExpireTime - Time/Date of order expiration (always expressed in UTC (Universal Time Coordinated, also known as
+	// 'GMT')
+	TagExpireTime
+
+	// TagDKReason - Reason for execution rejection.
+	TagDKReason
+
+	// TagDeliverToCompID - Assigned value used to identify the firm targeted to receive the message if the message is
+	// delivered by a third party i.e. the third party firm identifier would be delivered in the TargetCompID (56) field
+	// and the ultimate receiver firm ID in this field.
+	TagDeliverToCompID
+
+	// TagDeliverToSubID - Assigned value used to identify specific message recipient (i.e. trader) if the message is
+	// delivered by a third party
+	TagDeliverToSubID
+
+	// TagIOINaturalFlag - Indicates that IOI is the result of an existing agency order or a facilitation position
+	// resulting from an agency order, not from principal trading or order solicitation activity.
+	TagIOINaturalFlag
 )

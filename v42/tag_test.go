@@ -130,6 +130,16 @@ func TestTagValues(t *testing.T) {
 		{"TagNetMoney", TagNetMoney, 118},
 		{"TagSettlCurrAmt", TagSettlCurrAmt, 119},
 		{"TagSettlCurrency", TagSettlCurrency, 120},
+		{"TagForexReq", TagForexReq, 121},
+		{"TagOrigSendingTime", TagOrigSendingTime, 122},
+		{"TagGapFillFlag", TagGapFillFlag, 123},
+		{"TagNoExecs", TagNoExecs, 124},
+		{"TagCxlType", TagCxlType, 125},
+		{"TagExpireTime", TagExpireTime, 126},
+		{"TagDKReason", TagDKReason, 127},
+		{"TagDeliverToCompID", TagDeliverToCompID, 128},
+		{"TagDeliverToSubID", TagDeliverToSubID, 129},
+		{"TagIOINaturalFlag", TagIOINaturalFlag, 130},
 	}
 
 	for _, tc := range testCases {
