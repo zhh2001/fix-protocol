@@ -376,4 +376,39 @@ const (
 
 	// TagMinQty - Minimum quantity of an order to be executed.
 	TagMinQty
+
+	// TagMaxFloor - Maximum number of shares within an order to be shown on the exchange floor at any given time.
+	TagMaxFloor
+
+	// TagTestReqID - Identifier included in Test Request <35=1> message to be returned in resulting Heartbeat <35=0>
+	TagTestReqID
+
+	// TagReportToExch - Identifies party of trade responsible for exchange reporting.
+	TagReportToExch
+
+	// TagLocateReqd - Indicates whether the broker is to locate the stock in conjunction with a short sell order.
+	TagLocateReqd
+
+	// TagOnBehalfOfCompID - Assigned value used to identify firm originating message if the message was delivered by a
+	// third party i.e. the third party firm identifier would be delivered in the SenderCompID (49) field and the firm
+	// originating the message in this field.
+	TagOnBehalfOfCompID
+
+	// TagOnBehalfOfSubID - Assigned value used to identify specific message originator (i.e. trader) if the message was
+	// delivered by a third party
+	TagOnBehalfOfSubID
+
+	// TagQuoteID - Unique identifier for quote
+	TagQuoteID
+
+	// TagNetMoney - Total amount due as the result of the transaction (e.g. for Buy order - principal + commission +
+	// fees) reported in currency of execution.
+	TagNetMoney
+
+	// TagSettlCurrAmt - Total amount due expressed in settlement currency (includes the effect of the forex
+	// transaction)
+	TagSettlCurrAmt
+
+	// TagSettlCurrency - Currency code of settlement denomination.
+	TagSettlCurrency
 )
