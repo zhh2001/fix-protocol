@@ -174,6 +174,9 @@ func TestSideEnumValues(t *testing.T) {
 		{"OrdTypeFunari", OrdTypeFunari, "I"},
 		{"OrdTypePegged", OrdTypePegged, "P"},
 
+		{"PossDupFlagNo", PossDupFlagNo, "N"},
+		{"PossDupFlagYes", PossDupFlagYes, "Y"},
+
 		{"SideBuy", SideBuy, "1"},
 		{"SideSell", SideSell, "2"},
 		{"SideBuyMinus", SideBuyMinus, "3"},

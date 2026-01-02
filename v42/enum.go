@@ -206,6 +206,12 @@ const (
 	OrdTypePegged                = "P" // Pegged
 )
 
+// PossDupFlag
+const (
+	PossDupFlagNo  = "N" // Original transmission
+	PossDupFlagYes = "Y" // Possible duplicate
+)
+
 // Side
 const (
 	SideBuy             = "1" // Buy
