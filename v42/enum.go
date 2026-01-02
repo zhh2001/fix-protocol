@@ -164,6 +164,25 @@ const (
 	MsgTypeTradingSessionStatusRequest   = "g" // Trading Session Status Request
 )
 
+// OrdStatus
+const (
+	OrdStatusNew                = "0" // New
+	OrdStatusPartiallyFilled    = "1" // Partially filled
+	OrdStatusFilled             = "2" // Filled
+	OrdStatusDoneForDay         = "3" // Done for day
+	OrdStatusCanceled           = "4" // Canceled
+	OrdStatusReplaced           = "5" // Replaced
+	OrdStatusPendingCancel      = "6" // Pending Cancel (e.g. result of Order Cancel Request)
+	OrdStatusStopped            = "7" // Stopped
+	OrdStatusRejected           = "8" // Rejected
+	OrdStatusSuspended          = "9" // Suspended
+	OrdStatusPendingNew         = "A" // Pending New
+	OrdStatusCalculated         = "B" // Calculated
+	OrdStatusExpired            = "C" // Expired
+	OrdStatusAcceptedForBidding = "D" // Accepted for bidding
+	OrdStatusPendingReplace     = "E" // Pending Replace (e.g. result of Order Cancel/Replace Request)
+)
+
 // Side
 const (
 	SideBuy             = "1" // Buy
