@@ -226,4 +226,62 @@ const (
 	// TagFutSettDate - Specific date of trade settlement (SettlementDate) in YYYYMMDD format. Required when SettlmntTyp
 	// (63) = '6' (Future) or SettlmntTyp (63) = '8' (Sellers Option). (expressed in local time at place of settlement)
 	TagFutSettDate
+
+	// TagSymbolSfx - Additional information about the security (e.g. preferred, warrants, etc.).
+	TagSymbolSfx
+
+	// TagListID - Unique identifier for list as assigned by institution, used to associate multiple individual orders.
+	// Uniqueness must be guaranteed within a single trading day. Firms which generate multi-day orders should consider
+	// embedding a date within the ListID (66) field to assure uniqueness across days.
+	TagListID
+
+	// TagListSeqNo - Sequence of individual order within list (i.e. ListSeqNo (67) of TotNoOrders (68), 2 of 25, 3 of
+	// 25, . . . )
+	TagListSeqNo
+
+	// TagTotNoOrders - Total number of list order entries across all messages. Should be the sum of all NoOrders (73)
+	// in each message that has repeating list order entries related to the same ListID (66). Used to support
+	// fragmentation.
+	TagTotNoOrders
+
+	// TagListExecInst - Free format text message containing list handling and execution instructions.
+	TagListExecInst
+
+	// TagAllocID - Unique identifier for Allocation <35=J> message.
+	TagAllocID
+
+	// TagAllocTransType - Identifies allocation transaction type
+	TagAllocTransType
+
+	// TagRefAllocID - Reference identifier to be used with Replace, Cancel, and Calculated AllocTransType (71)
+	// messages.
+	TagRefAllocID
+
+	// TagNoOrders - Indicates number of orders to be combined for average pricing and allocation.
+	TagNoOrders
+
+	// TagAvgPrxPrecision - Indicates number of decimal places to be used for average pricing. Absence of this field
+	// indicates that default precision arranged by the broker/institution is to be used.
+	TagAvgPrxPrecision
+
+	// TagTradeDate - Indicates date of trade referenced in this message in YYYYMMDD format. Absence of this field
+	// indicates current day (expressed in local time at place of trade).
+	TagTradeDate
+
+	// TagExecBroker - Identifies executing / give-up broker. Standard NASD market-maker mnemonic is preferred.
+	TagExecBroker
+
+	// TagOpenClose - Indicates whether the resulting position after a trade should be an opening position or closing
+	// position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted
+	// together.
+	TagOpenClose
+
+	// TagNoAllocs - Number of repeating AllocAccount (79)/AllocPrice (366) entries.
+	TagNoAllocs
+
+	// TagAllocAccount - Sub-account mnemonic
+	TagAllocAccount
+
+	// TagAllocShares - Number of shares to be allocated to specific sub-account
+	TagAllocShares
 )
