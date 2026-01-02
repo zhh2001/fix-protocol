@@ -198,6 +198,17 @@ func TestSideEnumValues(t *testing.T) {
 		{"UrgencyNormal", UrgencyNormal, "0"},
 		{"UrgencyFlash", UrgencyFlash, "1"},
 		{"UrgencyBackground", UrgencyBackground, "2"},
+
+		{"SettlmntTypRegular", SettlmntTypRegular, "0"},
+		{"SettlmntTypCash", SettlmntTypCash, "1"},
+		{"SettlmntTypNextDay", SettlmntTypNextDay, "2"},
+		{"SettlmntTypT2", SettlmntTypT2, "3"},
+		{"SettlmntTypT3", SettlmntTypT3, "4"},
+		{"SettlmntTypT4", SettlmntTypT4, "5"},
+		{"SettlmntTypFuture", SettlmntTypFuture, "6"},
+		{"SettlmntTypWhenIssued", SettlmntTypWhenIssued, "7"},
+		{"SettlmntTypSellersOption", SettlmntTypSellersOption, "8"},
+		{"SettlmntTypT5", SettlmntTypT5, "9"},
 	}
 
 	// Run each test case

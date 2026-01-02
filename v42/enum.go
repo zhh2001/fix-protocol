@@ -242,3 +242,17 @@ const (
 	UrgencyFlash      = "1" // Flash
 	UrgencyBackground = "2" // Background
 )
+
+// SettlmntTyp
+const (
+	SettlmntTypRegular       = "0" // Regular
+	SettlmntTypCash          = "1" // Cash
+	SettlmntTypNextDay       = "2" // Next Day
+	SettlmntTypT2            = "3" // T+2
+	SettlmntTypT3            = "4" // T+3
+	SettlmntTypT4            = "5" // T+4
+	SettlmntTypFuture        = "6" // Future
+	SettlmntTypWhenIssued    = "7" // When Issued
+	SettlmntTypSellersOption = "8" // Sellers Option
+	SettlmntTypT5            = "9" // T+5
+)
