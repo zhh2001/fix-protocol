@@ -55,6 +55,42 @@ func TestSideEnumValues(t *testing.T) {
 		{"ExecInstNetting", ExecInstNetting, "V"},
 		{"ExecInstPegToVWAP", ExecInstPegToVWAP, "W"},
 
+		{"ExecTransTypeNew", ExecTransTypeNew, "0"},
+		{"ExecTransTypeCancel", ExecTransTypeCancel, "1"},
+		{"ExecTransTypeCorrect", ExecTransTypeCorrect, "2"},
+		{"ExecTransTypeStatus", ExecTransTypeStatus, "3"},
+
+		{"HandlInstAutoExecOrderPrivate", HandlInstAutoExecOrderPrivate, "1"},
+		{"HandlInstAutoExecOrderPublic", HandlInstAutoExecOrderPublic, "2"},
+		{"HandlInstManualOrder", HandlInstManualOrder, "3"},
+
+		{"IDSourceCUSIP", IDSourceCUSIP, "1"},
+		{"IDSourceSEDOL", IDSourceSEDOL, "2"},
+		{"IDSourceQUIK", IDSourceQUIK, "3"},
+		{"IDSourceISIN", IDSourceISIN, "4"},
+		{"IDSourceRIC", IDSourceRIC, "5"},
+		{"IDSourceISOCurrency", IDSourceISOCurrency, "6"},
+		{"IDSourceISOCountry", IDSourceISOCountry, "7"},
+		{"IDSourceExchange", IDSourceExchange, "8"},
+		{"IDSourceCTA", IDSourceCTA, "9"},
+
+		{"IOIQltyIndHigh", IOIQltyIndHigh, "H"},
+		{"IOIQltyIndLow", IOIQltyIndLow, "L"},
+		{"IOIQltyIndMedium", IOIQltyIndMedium, "M"},
+
+		{"IOISharesLarge", IOISharesLarge, "L"},
+		{"IOISharesMedium", IOISharesMedium, "M"},
+		{"IOISharesSmall", IOISharesSmall, "S"},
+
+		{"IOITransTypeCancel", IOITransTypeCancel, "C"},
+		{"IOITransTypeNew", IOITransTypeNew, "N"},
+		{"IOITransTypeReplace", IOITransTypeReplace, "R"},
+
+		{"LastCapacityAgent", LastCapacityAgent, "1"},
+		{"LastCapacityCrossAsAgent", LastCapacityCrossAsAgent, "2"},
+		{"LastCapacityCrossAsPrincipal", LastCapacityCrossAsPrincipal, "3"},
+		{"LastCapacityPrincipal", LastCapacityPrincipal, "4"},
+
 		{"SideBuy", SideBuy, "1"},
 		{"SideSell", SideSell, "2"},
 		{"SideBuyMinus", SideBuyMinus, "3"},

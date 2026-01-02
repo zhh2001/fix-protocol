@@ -57,6 +57,63 @@ const (
 	ExecInstPegToVWAP                  = "W" // Peg to VWAP
 )
 
+// ExecTransType
+const (
+	ExecTransTypeNew     = "0" // New
+	ExecTransTypeCancel  = "1" // Cancel
+	ExecTransTypeCorrect = "2" // Correct
+	ExecTransTypeStatus  = "3" // Status
+)
+
+// HandlInst
+const (
+	HandlInstAutoExecOrderPrivate = "1" // Automated execution order, private, no Broker intervention
+	HandlInstAutoExecOrderPublic  = "2" // Automated execution order, public, Broker intervention OK
+	HandlInstManualOrder          = "3" // Manual order, best execution
+)
+
+// IDSource
+const (
+	IDSourceCUSIP       = "1" // CUSIP
+	IDSourceSEDOL       = "2" // SEDOL
+	IDSourceQUIK        = "3" // QUIK
+	IDSourceISIN        = "4" // ISIN number
+	IDSourceRIC         = "5" // RIC code
+	IDSourceISOCurrency = "6" // ISO Currency Code
+	IDSourceISOCountry  = "7" // ISO Country Code
+	IDSourceExchange    = "8" // Exchange Symbol
+	IDSourceCTA         = "9" // Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)
+)
+
+// IOIQltyInd
+const (
+	IOIQltyIndHigh   = "H" // High
+	IOIQltyIndLow    = "L" // Low
+	IOIQltyIndMedium = "M" // Medium
+)
+
+// IOIShares
+const (
+	IOISharesLarge  = "L" // Large
+	IOISharesMedium = "M" // Medium
+	IOISharesSmall  = "S" // Small
+)
+
+// IOITransType
+const (
+	IOITransTypeCancel  = "C" // Cancel
+	IOITransTypeNew     = "N" // New
+	IOITransTypeReplace = "R" // Replace
+)
+
+// LastCapacity
+const (
+	LastCapacityAgent            = "1" // Agent
+	LastCapacityCrossAsAgent     = "2" // Cross as agent
+	LastCapacityCrossAsPrincipal = "3" // Cross as principal
+	LastCapacityPrincipal        = "4" // Principal
+)
+
 // Side
 const (
 	SideBuy             = "1" // Buy
