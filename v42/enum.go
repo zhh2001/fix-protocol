@@ -114,6 +114,56 @@ const (
 	LastCapacityPrincipal        = "4" // Principal
 )
 
+// MsgType
+const (
+	MsgTypeAdvertisement                 = "7" // Advertisement
+	MsgTypeAllocation                    = "J" // Allocation
+	MsgTypeAllocationAck                 = "P" // Allocation Ack
+	MsgTypeBidRequest                    = "k" // Bid Request
+	MsgTypeBidResponse                   = "l" // Bid Response
+	MsgTypeBusinessMessageReject         = "j" // Business Message Reject
+	MsgTypeDontKnowTrade                 = "Q" // Don't Know Trade
+	MsgTypeEmail                         = "C" // Email
+	MsgTypeExecutionReport               = "8" // Execution Report
+	MsgTypeHeartbeat                     = "0" // Heartbeat
+	MsgTypeIndicationOfInterest          = "6" // Indication of Interest
+	MsgTypeListCancelRequest             = "K" // List Cancel Request
+	MsgTypeListExecute                   = "L" // List Execute
+	MsgTypeListStatus                    = "N" // List Status
+	MsgTypeListStatusRequest             = "M" // List Status Request
+	MsgTypeListStrikePrice               = "m" // List Strike Price
+	MsgTypeLogon                         = "A" // Logon
+	MsgTypeLogout                        = "5" // Logout
+	MsgTypeMarketDataIncrementalRefresh  = "X" // Market Data Incremental Refresh
+	MsgTypeMarketDataRequest             = "V" // Market Data Request
+	MsgTypeMarketDataRequestReject       = "Y" // Market Data Request Reject
+	MsgTypeMarketDataSnapshotFullRefresh = "W" // Market Data Snapshot Full Refresh
+	MsgTypeMassQuote                     = "i" // Mass Quote
+	MsgTypeNewOrderList                  = "E" // New Order List
+	MsgTypeNews                          = "B" // News
+	MsgTypeOrderCancelReject             = "9" // Order Cancel Reject
+	MsgTypeOrderCancelRequest            = "F" // Order Cancel Request
+	MsgTypeOrderCancelOrReplaceRequest   = "G" // Order Cancel/Replace Request
+	MsgTypeOrderSingle                   = "D" // Order Single
+	MsgTypeOrderStatusRequest            = "H" // Order Status Request
+	MsgTypeQuote                         = "S" // Quote
+	MsgTypeQuoteAcknowledgement          = "b" // Quote Acknowledgement
+	MsgTypeQuoteCancel                   = "Z" // Quote Cancel
+	MsgTypeQuoteRequest                  = "R" // Quote Request
+	MsgTypeQuoteStatusRequest            = "a" // Quote Status Request
+	MsgTypeReject                        = "3" // Reject
+	MsgTypeResendRequest                 = "2" // Resend Request
+	MsgTypeSecurityDefinition            = "d" // Security Definition
+	MsgTypeSecurityDefinitionRequest     = "c" // Security Definition Request
+	MsgTypeSecurityStatus                = "f" // Security Status
+	MsgTypeSecurityStatusRequest         = "e" // Security Status Request
+	MsgTypeSequenceReset                 = "4" // Sequence Reset
+	MsgTypeSettlementInstructions        = "T" // Settlement Instructions
+	MsgTypeTestRequest                   = "1" // Test Request
+	MsgTypeTradingSessionStatus          = "h" // Trading Session Status
+	MsgTypeTradingSessionStatusRequest   = "g" // Trading Session Status Request
+)
+
 // Side
 const (
 	SideBuy             = "1" // Buy
