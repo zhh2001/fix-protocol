@@ -110,6 +110,16 @@ func TestTagValues(t *testing.T) {
 		{"TagEncryptMethod", TagEncryptMethod, 98},
 		{"TagStopPx", TagStopPx, 99},
 		{"TagExDestination", TagExDestination, 100},
+
+		{"TagCxlRejReason", TagCxlRejReason, 102},
+		{"TagOrdRejReason", TagOrdRejReason, 103},
+		{"TagIOIQualifier", TagIOIQualifier, 104},
+		{"TagWaveNo", TagWaveNo, 105},
+		{"TagIssuer", TagIssuer, 106},
+		{"TagSecurityDesc", TagSecurityDesc, 107},
+		{"TagHeartBtInt", TagHeartBtInt, 108},
+		{"TagClientID", TagClientID, 109},
+		{"TagMinQty", TagMinQty, 110},
 	}
 
 	for _, tc := range testCases {

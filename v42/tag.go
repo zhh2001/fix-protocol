@@ -345,4 +345,35 @@ const (
 
 	// TagExDestination - Execution destination as defined by institution when order is entered.
 	TagExDestination
+
+	// 101
+	_
+
+	// TagCxlRejReason - Code to identify reason for cancel rejection.
+	TagCxlRejReason
+
+	// TagOrdRejReason - Code to identify reason for order rejection.
+	TagOrdRejReason
+
+	// TagIOIQualifier - Code to qualify IOI use.
+	TagIOIQualifier
+
+	// TagWaveNo - Identifier to aid in the management of multiple lists derived from a single, master list.
+	TagWaveNo
+
+	// TagIssuer - Company name of security issuer (e.g. International Business Machines)
+	TagIssuer
+
+	// TagSecurityDesc - Security description.
+	TagSecurityDesc
+
+	// TagHeartBtInt - Heartbeat <35=0> interval (seconds)
+	TagHeartBtInt
+
+	// TagClientID - Firm identifier used in third party-transactions (should not be a substitute for OnBehalfOfCompID
+	// (115)/DeliverToCompID (128)).
+	TagClientID
+
+	// TagMinQty - Minimum quantity of an order to be executed.
+	TagMinQty
 )
