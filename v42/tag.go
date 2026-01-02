@@ -324,4 +324,10 @@ const (
 
 	// TagSignatureLength - Number of bytes in Signature (89) field.
 	TagSignatureLength
+
+	// TagEmailType - Email <35=C> message type.
+	TagEmailType
+
+	// TagRawDataLength - Number of bytes in raw data field.
+	TagRawDataLength
 )

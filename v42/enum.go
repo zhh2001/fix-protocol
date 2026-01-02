@@ -303,3 +303,10 @@ const (
 	AllocRejCodeUnknownListID                  = "6" // unknown ListID
 	AllocRejCodeOther                          = "7" // other
 )
+
+// EmailType
+const (
+	EmailTypeNew        = "0" // New
+	EmailTypeReply      = "1" // Reply
+	EmailTypeAdminReply = "2" // Admin Reply
+)
