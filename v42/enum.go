@@ -183,6 +183,29 @@ const (
 	OrdStatusPendingReplace     = "E" // Pending Replace (e.g. result of Order Cancel/Replace Request)
 )
 
+// OrdType
+const (
+	OrdTypeMarket                = "1" // Market
+	OrdTypeLimit                 = "2" // Limit
+	OrdTypeStop                  = "3" // Stop
+	OrdTypeStopLimit             = "4" // Stop limit
+	OrdTypeMarketOnClose         = "5" // Market on close
+	OrdTypeWithOrWithout         = "6" // With or without
+	OrdTypeLimitOrBetter         = "7" // Limit or better
+	OrdTypeLimitWithOrWithout    = "8" // Limit with or without
+	OrdTypeOnBasis               = "9" // On basis
+	OrdTypeOnClose               = "A" // On close
+	OrdTypeLimitOnClose          = "B" // Limit on close
+	OrdTypeForexMarket           = "C" // Forex - Market
+	OrdTypePreviouslyQuoted      = "D" // Previously quoted
+	OrdTypePreviouslyIndicated   = "E" // Previously indicated
+	OrdTypeForexLimit            = "F" // Forex - Limit
+	OrdTypeForexSwap             = "G" // Forex - Swap
+	OrdTypeForexPreviouslyQuoted = "H" // Forex - Previously Quoted
+	OrdTypeFunari                = "I" // Funari (Limit Day Order with unexecuted portion handled as Market On Close. e.g. Japan)
+	OrdTypePegged                = "P" // Pegged
+)
+
 // Side
 const (
 	SideBuy             = "1" // Buy
