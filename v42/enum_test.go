@@ -12,6 +12,9 @@ func TestSideEnumValues(t *testing.T) {
 	}{
 		{"BeginStringFIX42", BeginStringFIX42, "FIX.4.2"},
 
+		{"Close", Close, "C"},
+		{"Open", Open, "O"},
+
 		{"AdvSideBuy", AdvSideBuy, "B"},
 		{"AdvSideSell", AdvSideSell, "S"},
 		{"AdvSideTrade", AdvSideTrade, "T"},

@@ -2,6 +2,12 @@ package fields
 
 const BeginStringFIX42 = "FIX.4.2"
 
+// OpenClose
+const (
+	Close = "C"
+	Open  = "O"
+)
+
 // AdvSide
 const (
 	AdvSideBuy   = "B" // Buy
