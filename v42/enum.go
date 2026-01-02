@@ -235,3 +235,10 @@ const (
 	TimeInForceGTX = "5" // Good Till Crossing (GTX)
 	TimeInForceGTD = "6" // Good Till Date
 )
+
+// Urgency
+const (
+	UrgencyNormal     = "0" // Normal
+	UrgencyFlash      = "1" // Flash
+	UrgencyBackground = "2" // Background
+)

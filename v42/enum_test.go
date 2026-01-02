@@ -194,6 +194,10 @@ func TestSideEnumValues(t *testing.T) {
 		{"TimeInForceFOK", TimeInForceFOK, "4"},
 		{"TimeInForceGTX", TimeInForceGTX, "5"},
 		{"TimeInForceGTD", TimeInForceGTD, "6"},
+
+		{"UrgencyNormal", UrgencyNormal, "0"},
+		{"UrgencyFlash", UrgencyFlash, "1"},
+		{"UrgencyBackground", UrgencyBackground, "2"},
 	}
 
 	// Run each test case
