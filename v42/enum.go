@@ -291,3 +291,15 @@ const (
 	AllocStatusPartialAccept = "2" // partial accept
 	AllocStatusReceived      = "3" // received (received, not yet processed)
 )
+
+// AllocRejCode
+const (
+	AllocRejCodeUnknownAccounts                = "0" // unknown account(s)
+	AllocRejCodeIncorrectQuantity              = "1" // incorrect quantity
+	AllocRejCodeIncorrectAveragePrice          = "2" // incorrect average price
+	AllocRejCodeUnknownExecutingBrokerMnemonic = "3" // unknown executing broker mnemonic
+	AllocRejCodeCommissionDifference           = "4" // commission difference
+	AllocRejCodeUnknownOrderID                 = "5" // unknown OrderID
+	AllocRejCodeUnknownListID                  = "6" // unknown ListID
+	AllocRejCodeOther                          = "7" // other
+)

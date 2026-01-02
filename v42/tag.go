@@ -306,4 +306,22 @@ const (
 
 	// TagAllocStatus - Identifies status of allocation.
 	TagAllocStatus
+
+	// TagAllocRejCode - Identifies reason for rejection.
+	TagAllocRejCode
+
+	// TagSignature - Electronic signature
+	TagSignature
+
+	// TagSecureDataLen - Length of encrypted message
+	TagSecureDataLen
+
+	// TagSecureData - Actual encrypted data stream
+	TagSecureData
+
+	// TagBrokerOfCredit - Broker to receive trade credit.
+	TagBrokerOfCredit
+
+	// TagSignatureLength - Number of bytes in Signature (89) field.
+	TagSignatureLength
 )

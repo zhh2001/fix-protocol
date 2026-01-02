@@ -232,6 +232,15 @@ func TestSideEnumValues(t *testing.T) {
 		{"AllocStatusRejected", AllocStatusRejected, "1"},
 		{"AllocStatusPartialAccept", AllocStatusPartialAccept, "2"},
 		{"AllocStatusReceived", AllocStatusReceived, "3"},
+
+		{"AllocRejCodeUnknownAccounts", AllocRejCodeUnknownAccounts, "0"},
+		{"AllocRejCodeIncorrectQuantity", AllocRejCodeIncorrectQuantity, "1"},
+		{"AllocRejCodeIncorrectAveragePrice", AllocRejCodeIncorrectAveragePrice, "2"},
+		{"AllocRejCodeUnknownExecutingBrokerMnemonic", AllocRejCodeUnknownExecutingBrokerMnemonic, "3"},
+		{"AllocRejCodeCommissionDifference", AllocRejCodeCommissionDifference, "4"},
+		{"AllocRejCodeUnknownOrderID", AllocRejCodeUnknownOrderID, "5"},
+		{"AllocRejCodeUnknownListID", AllocRejCodeUnknownListID, "6"},
+		{"AllocRejCodeOther", AllocRejCodeOther, "7"},
 	}
 
 	// Run each test case
