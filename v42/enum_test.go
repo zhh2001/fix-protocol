@@ -227,6 +227,11 @@ func TestSideEnumValues(t *testing.T) {
 		{"ProcessCodeSoftDollarStepIn", ProcessCodeSoftDollarStepIn, "4"},
 		{"ProcessCodeSoftDollarStepOut", ProcessCodeSoftDollarStepOut, "5"},
 		{"ProcessCodePlanSponsor", ProcessCodePlanSponsor, "6"},
+
+		{"AllocStatusAccepted", AllocStatusAccepted, "0"},
+		{"AllocStatusRejected", AllocStatusRejected, "1"},
+		{"AllocStatusPartialAccept", AllocStatusPartialAccept, "2"},
+		{"AllocStatusReceived", AllocStatusReceived, "3"},
 	}
 
 	// Run each test case

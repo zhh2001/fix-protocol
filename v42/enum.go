@@ -283,3 +283,11 @@ const (
 	ProcessCodeSoftDollarStepOut = "5" // soft-dollar step-out
 	ProcessCodePlanSponsor       = "6" // plan sponsor
 )
+
+// AllocStatus
+const (
+	AllocStatusAccepted      = "0" // accepted (successfully processed)
+	AllocStatusRejected      = "1" // rejected
+	AllocStatusPartialAccept = "2" // partial accept
+	AllocStatusReceived      = "3" // received (received, not yet processed)
+)

@@ -303,4 +303,7 @@ const (
 
 	// TagDlvyInst - Free format text field to indicate delivery instructions
 	TagDlvyInst
+
+	// TagAllocStatus - Identifies status of allocation.
+	TagAllocStatus
 )

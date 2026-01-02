@@ -96,6 +96,7 @@ func TestTagValues(t *testing.T) {
 		{"TagCxlQty", TagCxlQty, 84},
 		{"TagNoDlvyInst", TagNoDlvyInst, 85},
 		{"TagDlvyInst", TagDlvyInst, 86},
+		{"TagAllocStatus", TagAllocStatus, 87},
 	}
 
 	for _, tc := range testCases {
