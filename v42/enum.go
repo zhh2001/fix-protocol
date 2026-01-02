@@ -1,5 +1,29 @@
 package fields
 
+const BeginStringFIX42 = "FIX.4.2"
+
+// AdvSide
+const (
+	AdvSideBuy   = "B" // Buy
+	AdvSideSell  = "S" // Sell
+	AdvSideTrade = "T" // Trade
+	AdvSideCross = "X" // Cross
+)
+
+// AdvTransType
+const (
+	AdvTransTypeCancel  = "C" // Cancel
+	AdvTransTypeNew     = "N" // New
+	AdvTransTypeReplace = "R" // Replace
+)
+
+// CommType
+const (
+	CommTypePerShare   = "1" // Per share
+	CommTypePercentage = "2" // Percentage
+	CommTypeAbsolute   = "3" // Absolute
+)
+
 // Side
 const (
 	SideBuy             = "1" // Buy
