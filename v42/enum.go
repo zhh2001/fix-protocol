@@ -224,3 +224,14 @@ const (
 	SideCross           = "8" // Cross (orders where counterparty is an exchange, valid for all messages except IOIs)
 	SideCrossShort      = "9" // Cross short
 )
+
+// TimeInForce
+const (
+	TimeInForceDay = "0" // Day
+	TimeInForceGTC = "1" // Good Till Cancel (GTC)
+	TimeInForceOPG = "2" // At the Opening (OPG)
+	TimeInForceIOC = "3" // Immediate or Cancel (IOC)
+	TimeInForceFOK = "4" // Fill or Kill (FOK)
+	TimeInForceGTX = "5" // Good Till Crossing (GTX)
+	TimeInForceGTD = "6" // Good Till Date
+)

@@ -186,6 +186,14 @@ func TestSideEnumValues(t *testing.T) {
 		{"SideUndisclosed", SideUndisclosed, "7"},
 		{"SideCross", SideCross, "8"},
 		{"SideCrossShort", SideCrossShort, "9"},
+
+		{"TimeInForceDay", TimeInForceDay, "0"},
+		{"TimeInForceGTC", TimeInForceGTC, "1"},
+		{"TimeInForceOPG", TimeInForceOPG, "2"},
+		{"TimeInForceIOC", TimeInForceIOC, "3"},
+		{"TimeInForceFOK", TimeInForceFOK, "4"},
+		{"TimeInForceGTX", TimeInForceGTX, "5"},
+		{"TimeInForceGTD", TimeInForceGTD, "6"},
 	}
 
 	// Run each test case
