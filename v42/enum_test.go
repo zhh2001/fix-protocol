@@ -245,6 +245,17 @@ func TestSideEnumValues(t *testing.T) {
 		{"EmailTypeNew", EmailTypeNew, "0"},
 		{"EmailTypeReply", EmailTypeReply, "1"},
 		{"EmailTypeAdminReply", EmailTypeAdminReply, "2"},
+
+		{"PossResendNo", PossResendNo, "N"},
+		{"PossResendYes", PossResendYes, "Y"},
+
+		{"EncryptMethodNone", EncryptMethodNone, "0"},
+		{"EncryptMethodPKCS", EncryptMethodPKCS, "1"},
+		{"EncryptMethodDES", EncryptMethodDES, "2"},
+		{"EncryptMethodPKCSDES", EncryptMethodPKCSDES, "3"},
+		{"EncryptMethodPGPDES", EncryptMethodPGPDES, "4"},
+		{"EncryptMethodPGPDESMD5", EncryptMethodPGPDESMD5, "5"},
+		{"EncryptMethodPEMDESMD5", EncryptMethodPEMDESMD5, "6"},
 	}
 
 	// Run each test case

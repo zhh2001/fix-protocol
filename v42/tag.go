@@ -333,4 +333,16 @@ const (
 
 	// TagRawData - Unformatted raw data, can include bitmaps, word processor documents, etc.
 	TagRawData
+
+	// TagPossResend - Indicates that message may contain information that has been sent under another sequence number.
+	TagPossResend
+
+	// TagEncryptMethod - Method of encryption.
+	TagEncryptMethod
+
+	// TagStopPx - Price per share
+	TagStopPx
+
+	// TagExDestination - Execution destination as defined by institution when order is entered.
+	TagExDestination
 )

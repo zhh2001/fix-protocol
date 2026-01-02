@@ -106,6 +106,10 @@ func TestTagValues(t *testing.T) {
 		{"TagEmailType", TagEmailType, 94},
 		{"TagRawDataLength", TagRawDataLength, 95},
 		{"TagRawData", TagRawData, 96},
+		{"TagPossResend", TagPossResend, 97},
+		{"TagEncryptMethod", TagEncryptMethod, 98},
+		{"TagStopPx", TagStopPx, 99},
+		{"TagExDestination", TagExDestination, 100},
 	}
 
 	for _, tc := range testCases {

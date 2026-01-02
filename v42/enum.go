@@ -310,3 +310,20 @@ const (
 	EmailTypeReply      = "1" // Reply
 	EmailTypeAdminReply = "2" // Admin Reply
 )
+
+// PossResend
+const (
+	PossResendNo  = "N" // Original transmission
+	PossResendYes = "Y" // Possible resend
+)
+
+// EncryptMethod
+const (
+	EncryptMethodNone      = "0" // None / other
+	EncryptMethodPKCS      = "1" // PKCS (proprietary)
+	EncryptMethodDES       = "2" // DES (ECB mode)
+	EncryptMethodPKCSDES   = "3" // PKCS/DES (proprietary)
+	EncryptMethodPGPDES    = "4" // PGP/DES (defunct)
+	EncryptMethodPGPDESMD5 = "5" // PGP/DES-MD5 (see app note on FIX website)
+	EncryptMethodPEMDESMD5 = "6" // PEM/DES-MD5 (see app note on FIX website)
+)
