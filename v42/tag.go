@@ -330,4 +330,7 @@ const (
 
 	// TagRawDataLength - Number of bytes in raw data field.
 	TagRawDataLength
+
+	// TagRawData - Unformatted raw data, can include bitmaps, word processor documents, etc.
+	TagRawData
 )

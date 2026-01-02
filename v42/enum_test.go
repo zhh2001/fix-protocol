@@ -241,6 +241,10 @@ func TestSideEnumValues(t *testing.T) {
 		{"AllocRejCodeUnknownOrderID", AllocRejCodeUnknownOrderID, "5"},
 		{"AllocRejCodeUnknownListID", AllocRejCodeUnknownListID, "6"},
 		{"AllocRejCodeOther", AllocRejCodeOther, "7"},
+
+		{"EmailTypeNew", EmailTypeNew, "0"},
+		{"EmailTypeReply", EmailTypeReply, "1"},
+		{"EmailTypeAdminReply", EmailTypeAdminReply, "2"},
 	}
 
 	// Run each test case
