@@ -150,6 +150,16 @@ func TestTagValues(t *testing.T) {
 		{"TagMiscFeeCurr", TagMiscFeeCurr, 138},
 		{"TagMiscFeeType", TagMiscFeeType, 139},
 		{"TagPrevClosePx", TagPrevClosePx, 140},
+		{"TagResetSeqNumFlag", TagResetSeqNumFlag, 141},
+		{"TagSenderLocationID", TagSenderLocationID, 142},
+		{"TagTargetLocationID", TagTargetLocationID, 143},
+		{"TagOnBehalfOfLocationID", TagOnBehalfOfLocationID, 144},
+		{"TagDeliverToLocationID", TagDeliverToLocationID, 145},
+		{"TagNoRelatedSym", TagNoRelatedSym, 146},
+		{"TagSubject", TagSubject, 147},
+		{"TagHeadline", TagHeadline, 148},
+		{"TagURLLink", TagURLLink, 149},
+		{"TagExecType", TagExecType, 150},
 	}
 
 	for _, tc := range testCases {

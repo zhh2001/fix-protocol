@@ -478,4 +478,40 @@ const (
 
 	// TagPrevClosePx - Previous closing price of security.
 	TagPrevClosePx
+
+	// TagResetSeqNumFlag - Indicates that the both sides of the FIX session should reset sequence numbers.
+	TagResetSeqNumFlag
+
+	// TagSenderLocationID - Assigned value used to identify specific message originator's location (i.e. geographic
+	// location and/or desk, trader)
+	TagSenderLocationID
+
+	// TagTargetLocationID - Assigned value used to identify specific message destination's location (i.e. geographic
+	// location and/or desk, trader)
+	TagTargetLocationID
+
+	// TagOnBehalfOfLocationID - Assigned value used to identify specific message originator's location (i.e. geographic
+	// location and/or desk, trader) if the message was delivered by a third party
+	TagOnBehalfOfLocationID
+
+	// TagDeliverToLocationID - Assigned value used to identify specific message recipient's location (i.e. geographic
+	// location and/or desk, trader) if the message was delivered by a third party
+	TagDeliverToLocationID
+
+	// TagNoRelatedSym - Specifies the number of repeating symbols specified.
+	TagNoRelatedSym
+
+	// TagSubject - The subject of an Email <35=C> message
+	TagSubject
+
+	// TagHeadline - The headline of a News <35=B> message
+	TagHeadline
+
+	// TagURLLink - A URL (Uniform Resource Locator) link to additional information (i.e.
+	// https://en.wikipedia.org/wiki/URL)
+	TagURLLink
+
+	// TagExecType - Describes the specific Execution Report <35=8> (i.e. Pending Cancel) while OrdStatus (39) will
+	// always identify the current order status (i.e. Partially Filled)
+	TagExecType
 )
