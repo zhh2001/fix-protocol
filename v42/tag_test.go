@@ -160,6 +160,16 @@ func TestTagValues(t *testing.T) {
 		{"TagHeadline", TagHeadline, 148},
 		{"TagURLLink", TagURLLink, 149},
 		{"TagExecType", TagExecType, 150},
+		{"TagLeavesQty", TagLeavesQty, 151},
+		{"TagCashOrderQty", TagCashOrderQty, 152},
+		{"TagAllocAvgPx", TagAllocAvgPx, 153},
+		{"TagAllocNetMoney", TagAllocNetMoney, 154},
+		{"TagSettlCurrFxRate", TagSettlCurrFxRate, 155},
+		{"TagSettlCurrFxRateCalc", TagSettlCurrFxRateCalc, 156},
+		{"TagNumDaysInterest", TagNumDaysInterest, 157},
+		{"TagAccruedInterestRate", TagAccruedInterestRate, 158},
+		{"TagAccruedInterestAmt", TagAccruedInterestAmt, 159},
+		{"TagSettlInstMode", TagSettlInstMode, 160},
 	}
 
 	for _, tc := range testCases {

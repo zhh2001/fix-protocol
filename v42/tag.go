@@ -514,4 +514,39 @@ const (
 	// TagExecType - Describes the specific Execution Report <35=8> (i.e. Pending Cancel) while OrdStatus (39) will
 	// always identify the current order status (i.e. Partially Filled)
 	TagExecType
+
+	// TagLeavesQty - Amount of shares open for further execution. If the OrdStatus (39) is Canceled, DoneForTheDay,
+	// Expired, Calculated, or Rejected (in which case the order is no longer active) then LeavesQty (151) could be 0,
+	// otherwise LeavesQty (151) = OrderQty (38) - CumQty (14).
+	TagLeavesQty
+
+	// TagCashOrderQty - Specifies the approximate order quantity desired in total monetary units vs. as a number of
+	// shares. The broker would be responsible for converting and calculating a share quantity (OrderQty (38)) based
+	// upon this amount to be used for the actual order and subsequent messages.
+	TagCashOrderQty
+
+	// TagAllocAvgPx - AvgPx (6) for a specific AllocAccount (79)
+	TagAllocAvgPx
+
+	// TagAllocNetMoney - NetMoney (118) for a specific AllocAccount (79)
+	TagAllocNetMoney
+
+	// TagSettlCurrFxRate - Foreign exchange rate used to compute SettlCurrAmt (119) from Currency (15) to SettlCurrency
+	// (120)
+	TagSettlCurrFxRate
+
+	// TagSettlCurrFxRateCalc - Specifies whether or not SettlCurrFxRate (155) should be multiplied or divided.
+	TagSettlCurrFxRateCalc
+
+	// TagNumDaysInterest - Number of Days of Interest for convertible bonds and fixed income
+	TagNumDaysInterest
+
+	// TagAccruedInterestRate - Accrued Interest Rate for convertible bonds and fixed income
+	TagAccruedInterestRate
+
+	// TagAccruedInterestAmt - Amount of Accrued Interest for convertible bonds and fixed income
+	TagAccruedInterestAmt
+
+	// TagSettlInstMode - Indicates mode used for Settlement Instructions <35=T>
+	TagSettlInstMode
 )
