@@ -851,4 +851,97 @@ const (
 	// TagMDEntryPositionNo - Display position of a bid or offer, numbered from most competitive to least competitive,
 	// per market side, beginning with 1.
 	TagMDEntryPositionNo
+
+	// TagFinancialStatus - Identifies a firm's financial status.
+	TagFinancialStatus
+
+	// TagCorporateAction - Identifies the type of Corporate Action.
+	TagCorporateAction
+
+	// TagDefBidSize - Default Bid Size.
+	TagDefBidSize
+
+	// TagDefOfferSize - Default Offer Size.
+	TagDefOfferSize
+
+	// TagNoQuoteEntries - The number of quote entries for a QuoteSet.
+	TagNoQuoteEntries
+
+	// TagNoQuoteSets - The number of sets of quotes in the message.
+	TagNoQuoteSets
+
+	// TagQuoteAckStatus - Identifies the status of the quote acknowledgement.
+	TagQuoteAckStatus
+
+	// TagQuoteCancelType - Identifies the type of quote cancel.
+	TagQuoteCancelType
+
+	// TagQuoteEntryID - Uniquely identifies the quote as part of a QuoteSet.
+	TagQuoteEntryID
+
+	// TagQuoteRejectReason - Reason Quote was rejected.
+	TagQuoteRejectReason
+
+	// TagQuoteResponseLevel - Level of Response requested from receiver of quote messages.
+	TagQuoteResponseLevel
+
+	// TagQuoteSetID - Unique id for the Quote Set.
+	TagQuoteSetID
+
+	// TagQuoteRequestType - Indicates the type of Quote Request <35=R> being generated
+	TagQuoteRequestType
+
+	// TagTotQuoteEntries - Total number of quotes for the quote set across all messages. Should be the sum of all
+	// NoQuoteEntries (295) in each message that has repeating quotes that are part of the same quote set.
+	TagTotQuoteEntries
+
+	// TagUnderlyingIDSource - Underlying security's IDSource.
+	TagUnderlyingIDSource
+
+	// TagUnderlyingIssuer - Underlying security's Issuer.
+	TagUnderlyingIssuer
+
+	// TagUnderlyingSecurityDesc - Underlying security's SecurityDesc.
+	TagUnderlyingSecurityDesc
+
+	// TagUnderlyingSecurityExchange - Underlying security's SecurityExchange. Can be used to identify the underlying
+	// security.
+	TagUnderlyingSecurityExchange
+
+	// TagUnderlyingSecurityID - Underlying security's SecurityID.
+	TagUnderlyingSecurityID
+
+	// TagUnderlyingSecurityType - Underlying security's SecurityType.
+	TagUnderlyingSecurityType
+
+	// TagUnderlyingSymbol - Underlying security's Symbol.
+	TagUnderlyingSymbol
+
+	// TagUnderlyingSymbolSfx - Underlying security's SymbolSfx.
+	TagUnderlyingSymbolSfx
+
+	// TagUnderlyingMaturityMonthYear - Underlying security's MaturityMonthYear. Required if UnderlyingMaturityDay (314)
+	// is specified.
+	TagUnderlyingMaturityMonthYear
+
+	// TagUnderlyingMaturityDay - Underlying security's MaturityDay.
+	TagUnderlyingMaturityDay
+
+	// TagUnderlyingPutOrCall - Underlying security's PutOrCall.
+	TagUnderlyingPutOrCall
+
+	// TagUnderlyingStrikePrice - Underlying security's StrikePrice.
+	TagUnderlyingStrikePrice
+
+	// TagUnderlyingOptAttribute - Underlying security's OptAttribute.
+	TagUnderlyingOptAttribute
+
+	// TagUnderlyingCurrency - Underlying security's Currency.
+	TagUnderlyingCurrency
+
+	// TagRatioQty - Quantity of a particular leg in the security.
+	TagRatioQty
+
+	// TagSecurityReqID - Unique ID of a Security Definition Request <35=c>.
+	TagSecurityReqID
 )
