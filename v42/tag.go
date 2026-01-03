@@ -820,4 +820,35 @@ const (
 
 	// TagMDEntryRefID - Refers to a previous MDEntryID (278).
 	TagMDEntryRefID
+
+	// TagMDReqRejReason - Reason for the rejection of aMarket Data Request <35=V>.
+	TagMDReqRejReason
+
+	// TagMDEntryOriginator - Originator of a Market Data Entry
+	TagMDEntryOriginator
+
+	// TagLocationID - Identification of a Market Maker's location
+	TagLocationID
+
+	// TagDeskID - Identification of a Market Maker's desk
+	TagDeskID
+
+	// TagDeleteReason - Reason for deletion.
+	TagDeleteReason
+
+	// TagOpenCloseSettleFlag - Flag that identifies a price.
+	TagOpenCloseSettleFlag
+
+	// TagSellerDays - Specifies the number of days that may elapse before delivery of the security
+	TagSellerDays
+
+	// TagMDEntryBuyer - Buying party in a trade
+	TagMDEntryBuyer
+
+	// TagMDEntrySeller - Selling party in a trade
+	TagMDEntrySeller
+
+	// TagMDEntryPositionNo - Display position of a bid or offer, numbered from most competitive to least competitive,
+	// per market side, beginning with 1.
+	TagMDEntryPositionNo
 )
