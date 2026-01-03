@@ -581,4 +581,112 @@ const (
 	// TagStandInstDbName - Name of the Standing Instruction database represented with StandInstDbType (169) (i.e. the
 	// Global Custodian's name).
 	TagStandInstDbName
+
+	// TagStandInstDbID - Unique identifier used on the Standing Instructions database for the Standing Instructions to
+	// be referenced.
+	TagStandInstDbID
+
+	// TagSettlDeliveryType - Identifies type of settlement
+	TagSettlDeliveryType
+
+	// TagSettlDepositoryCode - Broker's account code at the depository (i.e. CEDEL ID for CEDEL, FINS for DTC, or
+	// Euroclear ID for Euroclear) if SettlLocation (166) is a depository
+	TagSettlDepositoryCode
+
+	// TagSettlBrkrCode - BIC (Bank Identification Code-Swift managed) code of the broker involved (i.e. for
+	// multi-company brokerage firms)
+	TagSettlBrkrCode
+
+	// TagSettlInstCode - BIC (Bank Identification Code-Swift managed) code of the institution involved (i.e. for
+	// multi-company institution firms)
+	TagSettlInstCode
+
+	// TagSecuritySettlAgentName - Name of SettlInstSource (165)'s local agent bank if SettlLocation (166) is not a
+	// depository
+	TagSecuritySettlAgentName
+
+	// TagSecuritySettlAgentCode - BIC (Bank Identification Code-Swift managed) code of the SettlInstSource (165)'s
+	// local agent bank if SettlLocation (166) is not a depository
+	TagSecuritySettlAgentCode
+
+	// TagSecuritySettlAgentAcctNum - SettlInstSource (165)'s account number at local agent bank if SettlLocation (166)
+	// is not a depository
+	TagSecuritySettlAgentAcctNum
+
+	// TagSecuritySettlAgentAcctName - Name of SettlInstSource (165)'s account at local agent bank if SettlLocation
+	// (166) is not a depository
+	TagSecuritySettlAgentAcctName
+
+	// TagSecuritySettlAgentContactName - Name of contact at local agent bank for SettlInstSource (165)'s account if
+	// SettlLocation (166) is not a depository
+	TagSecuritySettlAgentContactName
+
+	// TagSecuritySettlAgentContactPhone - Phone number for contact at local agent bank if SettlLocation (166) is not a
+	// depository
+	TagSecuritySettlAgentContactPhone
+
+	// TagCashSettlAgentName - Name of SettlInstSource (165)'s local agent bank if SettlDeliveryType (172)=Free
+	TagCashSettlAgentName
+
+	// TagCashSettlAgentCode - BIC (Bank Identification Code-Swift managed) code of the SettlInstSource (165)'s local
+	// agent bank if SettlDeliveryType (172)=Free
+	TagCashSettlAgentCode
+
+	// TagCashSettlAgentAcctNum - SettlInstSource (165)'s account number at local agent bank if SettlDeliveryType
+	// (172)=Free
+	TagCashSettlAgentAcctNum
+
+	// TagCashSettlAgentAcctName - Name of SettlInstSource (165)'s account at local agent bank if SettlDeliveryType
+	// (172)=Free
+	TagCashSettlAgentAcctName
+
+	// TagCashSettlAgentContactName - Name of contact at local agent bank for SettlInstSource (165)'s account if
+	// SettlDeliveryType (172)=Free
+	TagCashSettlAgentContactName
+
+	// TagCashSettlAgentContactPhone - Phone number for contact at local agent bank for SettlInstSource (165)'s account
+	// if SettlDeliveryType (172)=Free
+	TagCashSettlAgentContactPhone
+
+	// TagBidSpotRate - Bid F/X spot rate.
+	TagBidSpotRate
+
+	// TagBidForwardPoints - Bid F/X forward points added to spot rate. May be a negative value.
+	TagBidForwardPoints
+
+	// TagOfferSpotRate - Offer F/X spot rate.
+	TagOfferSpotRate
+
+	// TagOfferForwardPoints - Offer F/X forward points added to spot rate. May be a negative value.
+	TagOfferForwardPoints
+
+	// TagOrderQty2 - OrderQty (38) of the future part of a F/X swap order.
+	TagOrderQty2
+
+	// TagFutSettDate2 - FutSettDate (64) of the future part of a F/X swap order.
+	TagFutSettDate2
+
+	// TagLastSpotRate - F/X spot rate.
+	TagLastSpotRate
+
+	// TagLastForwardPoints - F/X forward points added to LastSpotRate (194). May be a negative value.
+	TagLastForwardPoints
+
+	// TagAllocLinkID - Can be used to link two different Allocation <35=J> messages (each with unique AllocID (70))
+	// together, i.e. for F/X 'Netting' or 'Swaps'. Should be unique.
+	TagAllocLinkID
+
+	// TagAllocLinkType - Identifies the type of Allocation <35=J> linkage when AllocLinkID (196) is used.
+	TagAllocLinkType
+
+	// TagSecondaryOrderID - Assigned by the party which accepts the order. Can be used to provide the OrderID (37) used
+	// by an exchange or executing system.
+	TagSecondaryOrderID
+
+	// TagNoIOIQualifiers - Number of repeating groups of IOIQualifiers.
+	TagNoIOIQualifiers
+
+	// TagMaturityMonthYear - Month and Year of the maturity for SecurityType (167)=FUT or SecurityType (167)=OPT.
+	// Required if MaturityDay (205) is specified.
+	TagMaturityMonthYear
 )
