@@ -346,8 +346,8 @@ const (
 	// TagExDestination - Execution destination as defined by institution when order is entered.
 	TagExDestination
 
-	// Tag101 - 101
-	Tag101
+	// 101
+	_
 
 	// TagCxlRejReason - Code to identify reason for cancel rejection.
 	TagCxlRejReason
@@ -689,4 +689,78 @@ const (
 	// TagMaturityMonthYear - Month and Year of the maturity for SecurityType (167)=FUT or SecurityType (167)=OPT.
 	// Required if MaturityDay (205) is specified.
 	TagMaturityMonthYear
+
+	// TagPutOrCall - Indicates whether an Option is for a put or call.
+	TagPutOrCall
+
+	// TagStrikePrice - Strike Price for an Option.
+	TagStrikePrice
+
+	// TagCoveredOrUncovered - Used for options
+	TagCoveredOrUncovered
+
+	// TagCustomerOrFirm - Used for options when delivering the order to an execution system/exchange to specify if the
+	// order is for a customer or the firm placing the order itself.
+	TagCustomerOrFirm
+
+	// TagMaturityDay - Day of month used in conjunction with MaturityMonthYear (200) to specify the maturity date for
+	// SecurityType (167)=FUT or SecurityType (167)=OPT.
+	TagMaturityDay
+
+	// TagOptAttribute - Can be used for SecurityType (167)=OPT to identify a particular security.
+	TagOptAttribute
+
+	// TagSecurityExchange - Market used to help identify a security.
+	TagSecurityExchange
+
+	// TagNotifyBrokerOfCredit - Indicates whether details should be communicated to BrokerOfCredit (92) (i.e. step-in
+	// broker).
+	TagNotifyBrokerOfCredit
+
+	// TagAllocHandlInst - Indicates how the receiver (i.e. third party) of Allocation <35=J> message should
+	// handle/process the account details.
+	TagAllocHandlInst
+
+	// TagMaxShow - Maximum number of shares within an order to be shown to other customers (i.e. sent via an IOI).
+	TagMaxShow
+
+	// TagPegDifference - Amount (signed) added to the price of the peg for a pegged order.
+	TagPegDifference
+
+	// TagXmlDataLen - Length of the XmlData (213) data block.
+	TagXmlDataLen
+
+	// TagXmlData - Actual XML data stream (e.g. FIXML). See approriate XML reference (e.g. FIXML). Note: may contain
+	// embedded SOH characters.
+	TagXmlData
+
+	// TagSettlInstRefID - Reference identifier for the SettlInstID (162) with Cancel and Replace SettlInstTransType
+	// (163) transaction types.
+	TagSettlInstRefID
+
+	// TagNoRoutingIDs - Number of repeating groups of RoutingID (217) and RoutingType (216) values.
+	TagNoRoutingIDs
+
+	// TagRoutingType - Indicates the type of RoutingID (217) specified.
+	TagRoutingType
+
+	// TagRoutingID - Assigned value used to identify a specific routing destination.
+	TagRoutingID
+
+	// TagSpreadToBenchmark - For Fixed Income. Basis points relative to a benchmark. To be expressed as "count of basis
+	// points" (vs. an absolute value). E.g. High Grade Corporate Bonds may express price as basis points relative to
+	// benchmark (the Benchmark (219) field). Note: Basis points can be negative.
+	TagSpreadToBenchmark
+
+	// TagBenchmark - For Fixed Income. Identifies the benchmark (e.g. used in conjunction with the SpreadToBenchmark
+	// (218) field).
+	TagBenchmark
+
+	// TagCouponRate - For Fixed Income. Coupon rate of the bond. Will be zero for step-up bonds.
+	TagCouponRate = iota + 4
+
+	// TagContractMultiplier - Specifies the ratio or multiply factor to convert from contracts to shares (e.g. 1.0,
+	// 100, 1000, etc.). Applicable For Fixed Income, Convertible Bonds, Derivatives, etc. Note: If used, quantities
+	// should be expressed in the "nominal" (e.g. contracts vs. shares) amount.
+	TagContractMultiplier = iota + 11
 )

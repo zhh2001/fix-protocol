@@ -110,7 +110,7 @@ func TestTagValues(t *testing.T) {
 		{"TagEncryptMethod", TagEncryptMethod, 98},
 		{"TagStopPx", TagStopPx, 99},
 		{"TagExDestination", TagExDestination, 100},
-		{"Tag101", Tag101, 101},
+
 		{"TagCxlRejReason", TagCxlRejReason, 102},
 		{"TagOrdRejReason", TagOrdRejReason, 103},
 		{"TagIOIQualifier", TagIOIQualifier, 104},
@@ -210,6 +210,29 @@ func TestTagValues(t *testing.T) {
 		{"TagSecondaryOrderID", TagSecondaryOrderID, 198},
 		{"TagNoIOIQualifiers", TagNoIOIQualifiers, 199},
 		{"TagMaturityMonthYear", TagMaturityMonthYear, 200},
+		{"TagPutOrCall", TagPutOrCall, 201},
+		{"TagStrikePrice", TagStrikePrice, 202},
+		{"TagCoveredOrUncovered", TagCoveredOrUncovered, 203},
+		{"TagCustomerOrFirm", TagCustomerOrFirm, 204},
+		{"TagMaturityDay", TagMaturityDay, 205},
+		{"TagOptAttribute", TagOptAttribute, 206},
+		{"TagSecurityExchange", TagSecurityExchange, 207},
+		{"TagNotifyBrokerOfCredit", TagNotifyBrokerOfCredit, 208},
+		{"TagAllocHandlInst", TagAllocHandlInst, 209},
+		{"TagMaxShow", TagMaxShow, 210},
+		{"TagPegDifference", TagPegDifference, 211},
+		{"TagXmlDataLen", TagXmlDataLen, 212},
+		{"TagXmlData", TagXmlData, 213},
+		{"TagSettlInstRefID", TagSettlInstRefID, 214},
+		{"TagNoRoutingIDs", TagNoRoutingIDs, 215},
+		{"TagRoutingType", TagRoutingType, 216},
+		{"TagRoutingID", TagRoutingID, 217},
+		{"TagSpreadToBenchmark", TagSpreadToBenchmark, 218},
+		{"TagBenchmark", TagBenchmark, 219},
+
+		{"TagCouponRate", TagCouponRate, 223},
+
+		{"TagContractMultiplier", TagContractMultiplier, 231},
 	}
 
 	for _, tc := range testCases {
