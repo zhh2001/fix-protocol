@@ -346,8 +346,8 @@ const (
 	// TagExDestination - Execution destination as defined by institution when order is entered.
 	TagExDestination
 
-	// 101
-	_
+	// Tag101 - 101
+	Tag101
 
 	// TagCxlRejReason - Code to identify reason for cancel rejection.
 	TagCxlRejReason
@@ -448,4 +448,34 @@ const (
 	// TagIOINaturalFlag - Indicates that IOI is the result of an existing agency order or a facilitation position
 	// resulting from an agency order, not from principal trading or order solicitation activity.
 	TagIOINaturalFlag
+
+	// TagQuoteReqID - Unique identifier for quote request
+	TagQuoteReqID
+
+	// TagBidPx - Bid price/rate
+	TagBidPx
+
+	// TagOfferPx - Offer price/rate
+	TagOfferPx
+
+	// TagBidSize - Quantity of bid
+	TagBidSize
+
+	// TagOfferSize - Quantity of offer
+	TagOfferSize
+
+	// TagNoMiscFees - Number of repeating groups of miscellaneous fees
+	TagNoMiscFees
+
+	// TagMiscFeeAmt - Miscellaneous fee value
+	TagMiscFeeAmt
+
+	// TagMiscFeeCurr - Currency (15) of miscellaneous fee
+	TagMiscFeeCurr
+
+	// TagMiscFeeType - Indicates type of miscellaneous fee.
+	TagMiscFeeType
+
+	// TagPrevClosePx - Previous closing price of security.
+	TagPrevClosePx
 )
