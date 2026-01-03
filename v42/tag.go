@@ -535,7 +535,7 @@ const (
 	// (120)
 	TagSettlCurrFxRate
 
-	// TagSettlCurrFxRateCalc - Specifies whether or not SettlCurrFxRate (155) should be multiplied or divided.
+	// TagSettlCurrFxRateCalc - Specifies whether SettlCurrFxRate (155) should be multiplied or divided.
 	TagSettlCurrFxRateCalc
 
 	// TagNumDaysInterest - Number of Days of Interest for convertible bonds and fixed income
@@ -763,4 +763,31 @@ const (
 	// 100, 1000, etc.). Applicable For Fixed Income, Convertible Bonds, Derivatives, etc. Note: If used, quantities
 	// should be expressed in the "nominal" (e.g. contracts vs. shares) amount.
 	TagContractMultiplier = iota + 11
+
+	// TagMDReqID - Unique identifier for Market Data Request <35=V>
+	TagMDReqID = iota + 41
+
+	// TagSubscriptionRequestType - Subscription Request Type
+	TagSubscriptionRequestType
+
+	// TagMarketDepth - Depth of market for Book Snapshot
+	TagMarketDepth
+
+	// TagMDUpdateType - Specifies the type of Market Data update.
+	TagMDUpdateType
+
+	// TagAggregatedBook - Specifies whether book entries should be aggregated.
+	TagAggregatedBook
+
+	// TagNoMDEntryTypes - Number of MDEntryType (269) fields requested.
+	TagNoMDEntryTypes
+
+	// TagNoMDEntries - Number of entries in Market Data message.
+	TagNoMDEntries
+
+	// TagMDEntryType - Type Market Data entry.
+	TagMDEntryType
+
+	// TagMDEntryPx - Price of the Market Data Entry.
+	TagMDEntryPx
 )
