@@ -944,4 +944,70 @@ const (
 
 	// TagSecurityReqID - Unique ID of a Security Definition Request <35=c>.
 	TagSecurityReqID
+
+	// TagSecurityRequestType - Type of Security Definition Request <35=c>.
+	TagSecurityRequestType
+
+	// TagSecurityResponseID - Unique ID of a Security Definition <35=d> message.
+	TagSecurityResponseID
+
+	// TagSecurityResponseType - Type of Security Definition <35=d> message response.
+	TagSecurityResponseType
+
+	// TagSecurityStatusReqID - Unique ID of a Security Status Request <35=e> message.
+	TagSecurityStatusReqID
+
+	// TagUnsolicitedIndicator - Indicates whether message is being sent as a result of a subscription request or not.
+	TagUnsolicitedIndicator
+
+	// TagSecurityTradingStatus - Identifies the trading status applicable to the transaction.
+	TagSecurityTradingStatus
+
+	// TagHaltReason - Denotes the reason for the Opening Delay or Trading Halt.
+	TagHaltReason
+
+	// TagInViewOfCommon - Indicates whether the halt was due to Common Stock trading being halted.
+	TagInViewOfCommon
+
+	// TagDueToRelated - Indicates whether the halt was due to the Related Security being halted.
+	TagDueToRelated
+
+	// TagBuyVolume - Number of shares bought.
+	TagBuyVolume
+
+	// TagSellVolume - Number of shares sold.
+	TagSellVolume
+
+	// TagHighPx - Represents an indication of the high end of the price range for a security prior to the open or
+	// reopen
+	TagHighPx
+
+	// TagLowPx - Represents an indication of the low end of the price range for a security prior to the open or reopen
+	TagLowPx
+
+	// TagAdjustment - Identifies the type of adjustment.
+	TagAdjustment
+
+	// TagTradSesReqID - Unique ID of a Trading Session Status <35=h> message.
+	TagTradSesReqID
+
+	// TagTradingSessionID - Identifier for Trading Session
+	//
+	// Can be used to represent a specific market trading session (e.g. 'PRE-OPEN", "CROSS_2", "AFTER-HOURS",
+	// "TOSTNET1", "TOSTNET2", etc.).
+	//
+	// Values should be bi-laterally agreed to between counterparties.
+	TagTradingSessionID
+
+	// TagContraTrader - Identifies the trader (e.g. "badge number") of the ContraBroker (375).
+	TagContraTrader
+
+	// TagTradSesMethod - Method of trading
+	TagTradSesMethod
+
+	// TagTradSesMode - Trading Session Mode
+	TagTradSesMode
+
+	// TagTradSesStatus - State of the trading session.
+	TagTradSesStatus
 )
