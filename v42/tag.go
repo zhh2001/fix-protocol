@@ -1010,4 +1010,121 @@ const (
 
 	// TagTradSesStatus - State of the trading session.
 	TagTradSesStatus
+
+	// TagTradSesStartTime - Starting time of the trading session
+	TagTradSesStartTime
+
+	// TagTradSesOpenTime - Time of the opening of the trading session
+	TagTradSesOpenTime
+
+	// TagTradSesPreCloseTime - Time of the pre-closed of the trading session
+	TagTradSesPreCloseTime
+
+	// TagTradSesCloseTime - Closing time of the trading session
+	TagTradSesCloseTime
+
+	// TagTradSesEndTime - End time of the trading session
+	TagTradSesEndTime
+
+	// TagNumberOfOrders - Number of orders in the market.
+	TagNumberOfOrders
+
+	// TagMessageEncoding - Type of message encoding (non-ASCII (non-English) characters) used in a message's 'Encoded'
+	// fields.
+	TagMessageEncoding
+
+	// TagEncodedIssuerLen - Byte length of encoded (non-ASCII characters) EncodedIssuer (349) field.
+	TagEncodedIssuerLen
+
+	// TagEncodedIssuer - Encoded (non-ASCII characters) representation of the Issuer (106) field in the encoded format
+	// specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be
+	// specified in the Issuer (106) field.
+	TagEncodedIssuer
+
+	// TagEncodedSecurityDescLen - Byte length of encoded (non-ASCII characters) EncodedSecurityDesc (351) field.
+	TagEncodedSecurityDescLen
+
+	// TagEncodedSecurityDesc - Encoded (non-ASCII characters) representation of the SecurityDesc (107) field in the
+	// encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should
+	// also be specified in the SecurityDesc (107) field.
+	TagEncodedSecurityDesc
+
+	// TagEncodedListExecInstLen - Byte length of encoded (non-ASCII characters) EncodedListExecInst (353) field.
+	TagEncodedListExecInstLen
+
+	// TagEncodedListExecInst - Encoded (non-ASCII characters) representation of the ListExecInst (69) field in the
+	// encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should
+	// also be specified in the ListExecInst (69) field.
+	TagEncodedListExecInst
+
+	// TagEncodedTextLen - Byte length of encoded (non-ASCII characters) EncodedText (355) field.
+	TagEncodedTextLen
+
+	// TagEncodedText - Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format
+	// specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be
+	// specified in the Text (58) field.
+	TagEncodedText
+
+	// TagEncodedSubjectLen - Byte length of encoded (non-ASCII characters) EncodedSubject (357) field.
+	TagEncodedSubjectLen
+
+	// TagEncodedSubject - Encoded (non-ASCII characters) representation of the Subject (147) field in the encoded
+	// format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be
+	// specified in the Subject (147) field.
+	TagEncodedSubject
+
+	// TagEncodedHeadlineLen - Byte length of encoded (non-ASCII characters) EncodedHeadline (359) field.
+	TagEncodedHeadlineLen
+
+	// TagEncodedHeadline - Encoded (non-ASCII characters) representation of the Headline (148) field in the encoded
+	// format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be
+	// specified in the Headline (148) field.
+	TagEncodedHeadline
+
+	// TagEncodedAllocTextLen - Byte length of encoded (non-ASCII characters) EncodedAllocText (361) field.
+	TagEncodedAllocTextLen
+
+	// TagEncodedAllocText - Encoded (non-ASCII characters) representation of the AllocText (161) field in the encoded
+	// format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be
+	// specified in the AllocText (161) field.
+	TagEncodedAllocText
+
+	// TagEncodedUnderlyingIssuerLen - Byte length of encoded (non-ASCII characters) EncodedUnderlyingIssuer (363)
+	// field.
+	TagEncodedUnderlyingIssuerLen
+
+	// TagEncodedUnderlyingIssuer - Encoded (non-ASCII characters) representation of the UnderlyingIssuer (306) field in
+	// the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation
+	// should also be specified in the UnderlyingIssuer (306) field.
+	TagEncodedUnderlyingIssuer
+
+	// TagEncodedUnderlyingSecurityDescLen - Byte length of encoded (non-ASCII characters) EncodedUnderlyingSecurityDesc
+	// (365) field.
+	TagEncodedUnderlyingSecurityDescLen
+
+	// TagEncodedUnderlyingSecurityDesc - Encoded (non-ASCII characters) representation of the UnderlyingSecurityDesc
+	// (307) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English)
+	// representation should also be specified in the UnderlyingSecurityeDesc field.
+	TagEncodedUnderlyingSecurityDesc
+
+	// TagAllocPrice - Executed price for an AllocAccount (79) entry used when using 'executed price' vs. 'average
+	// price' allocations (e.g. Japan).
+	TagAllocPrice
+
+	// TagQuoteSetValidUntilTime - Indicates expiration time of this particular QuoteSet (always expressed in UTC
+	// (Universal Time Coordinated, also known as 'GMT')
+	TagQuoteSetValidUntilTime
+
+	// TagQuoteEntryRejectReason - Reason Quote Entry was rejected: 1--9
+	TagQuoteEntryRejectReason
+
+	// TagLastMsgSeqNumProcessed - The last MsgSeqNum (34) value received and processed. Can be specified on every
+	// message sent. Useful for detecting a backlog with a counterparty.
+	TagLastMsgSeqNumProcessed
+
+	// TagOnBehalfOfSendingTime - Used when a message is sent via a 'hub' or 'service bureau'. If A sends to Q (the hub)
+	// who then sends to B via a separate FIX session, then when Q sends to B the value of this field should represent
+	// the SendingTime (52) on the message A sent to Q. (always expressed in UTC (Universal Time Coordinated, also known
+	// as 'GMT')
+	TagOnBehalfOfSendingTime
 )
