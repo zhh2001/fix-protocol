@@ -55,8 +55,8 @@ const (
 	TagCurrency
 
 	// TagEndSeqNo - Message sequence number of last message in range to be resent. If request is for a single message
-	// BeginSeqNo (7) = EndSeqNo (16). If request is for all messages subsequent to a particular message, EndSeqNo (16)
-	// = 0 (representing infinity).
+	// BeginSeqNo (7) = EndSeqNo (16). If request is for all messages after a particular message, EndSeqNo (16) = 0
+	// (representing infinity).
 	TagEndSeqNo
 
 	// TagExecID - Unique identifier of execution message as assigned by broker (will be 0 (zero) for ExecTransType
@@ -790,4 +790,34 @@ const (
 
 	// TagMDEntryPx - Price of the Market Data Entry.
 	TagMDEntryPx
+
+	// TagMDEntrySize - Number of shares represented by the Market Data Entry.
+	TagMDEntrySize
+
+	// TagMDEntryDate - Date of Market Data Entry.
+	TagMDEntryDate
+
+	// TagMDEntryTime - Time of Market Data Entry.
+	TagMDEntryTime
+
+	// TagTickDirection - Direction of the "tick".
+	TagTickDirection
+
+	// TagMDMkt - Market posting quote / trade.
+	TagMDMkt
+
+	// TagQuoteCondition - Space-delimited list of conditions describing a quote.
+	TagQuoteCondition
+
+	// TagTradeCondition - Space-delimited list of conditions describing a trade
+	TagTradeCondition
+
+	// TagMDEntryID - Unique Market Data Entry identifier.
+	TagMDEntryID
+
+	// TagMDUpdateAction - Type of Market Data update action.
+	TagMDUpdateAction
+
+	// TagMDEntryRefID - Refers to a previous MDEntryID (278).
+	TagMDEntryRefID
 )

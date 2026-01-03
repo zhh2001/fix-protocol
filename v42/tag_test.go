@@ -243,6 +243,16 @@ func TestTagValues(t *testing.T) {
 		{"TagNoMDEntries", TagNoMDEntries, 268},
 		{"TagMDEntryType", TagMDEntryType, 269},
 		{"TagMDEntryPx", TagMDEntryPx, 270},
+		{"TagMDEntrySize", TagMDEntrySize, 271},
+		{"TagMDEntryDate", TagMDEntryDate, 272},
+		{"TagMDEntryTime", TagMDEntryTime, 273},
+		{"TagTickDirection", TagTickDirection, 274},
+		{"TagMDMkt", TagMDMkt, 275},
+		{"TagQuoteCondition", TagQuoteCondition, 276},
+		{"TagTradeCondition", TagTradeCondition, 277},
+		{"TagMDEntryID", TagMDEntryID, 278},
+		{"TagMDUpdateAction", TagMDUpdateAction, 279},
+		{"TagMDEntryRefID", TagMDEntryRefID, 280},
 	}
 
 	for _, tc := range testCases {
