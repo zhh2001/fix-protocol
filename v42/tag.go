@@ -549,4 +549,36 @@ const (
 
 	// TagSettlInstMode - Indicates mode used for Settlement Instructions <35=T>
 	TagSettlInstMode
+
+	// TagAllocText - Free format text related to a specific AllocAccount (79).
+	TagAllocText
+
+	// TagSettlInstID - Unique identifier for Settlement Instructions <35=T> message.
+	TagSettlInstID
+
+	// TagSettlInstTransType - Settlement Instructions <35=T> message transaction type
+	TagSettlInstTransType
+
+	// TagEmailThreadID - Unique identifier for an email thread (new and chain of replies)
+	TagEmailThreadID
+
+	// TagSettlInstSource - Indicates source of Settlement Instructions <35=T>
+	TagSettlInstSource
+
+	// TagSettlLocation - Identifies Settlement Depository or Country (421) Code (ISITC spec)
+	TagSettlLocation
+
+	// TagSecurityType - Indicates type of security (ISITC spec)
+	TagSecurityType
+
+	// TagEffectiveTime - Time the details within the message should take effect (always expressed in UTC (Universal
+	// Time Coordinated, also known as 'GMT')
+	TagEffectiveTime
+
+	// TagStandInstDbType - Identifies the Standing Instruction database used
+	TagStandInstDbType
+
+	// TagStandInstDbName - Name of the Standing Instruction database represented with StandInstDbType (169) (i.e. the
+	// Global Custodian's name).
+	TagStandInstDbName
 )
