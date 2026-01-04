@@ -1301,4 +1301,92 @@ const (
 
 	// TagNoBidComponents - Indicates the number of list entries.
 	TagNoBidComponents
+
+	// TagCountry - ISO Country Code in field.
+	TagCountry
+
+	// TagTotNoStrikes - Total number of strike price entries across all messages. Should be the sum of all NoStrikes
+	// (428) in each message that has repeating strike price entries related to the same ListID (66). Used to support
+	// fragmentation.
+	TagTotNoStrikes
+
+	// TagPriceType - Code to represent the price type.
+	TagPriceType
+
+	// TagDayOrderQty - For GT orders, the OrderQty (38) less all shares (adjusted for stock splits) that traded on
+	// previous days. DayOrderQty (424) = OrderQty (38) - (CumQty (14) - DayCumQty (425))
+	TagDayOrderQty
+
+	// TagDayCumQty - The number of shares on a GT order that have traded today.
+	TagDayCumQty
+
+	// TagDayAvgPx - The average price of shares on a GT order that have traded today.
+	TagDayAvgPx
+
+	// TagGTBookingInst - Code to identify whether to book out executions on a part-filled GT order on the day of
+	// execution or to accumulate.
+	TagGTBookingInst
+
+	// TagNoStrikes - Number of list strike price entries.
+	TagNoStrikes
+
+	// TagListStatusType - Code to represent the price type.
+	TagListStatusType
+
+	// TagNetGrossInd - Code to represent whether value is net (inclusive of tax) or gross.
+	TagNetGrossInd
+
+	// TagListOrderStatus - Code to represent the status of a list order.
+	TagListOrderStatus
+
+	// TagExpireDate - Date of order expiration (last day the order can trade), always expressed in terms of the local
+	// market date. The time at which the order expires is determined by the local market's business practices
+	TagExpireDate
+
+	// TagListExecInstType - Identifies the type of ListExecInst (69).
+	TagListExecInstType
+
+	// TagCxlRejResponseTo - Identifies the type of request that a Order Cancel Reject <35=9> is in response to.
+	TagCxlRejResponseTo
+
+	// TagUnderlyingCouponRate - Underlying security's CouponRate.
+	TagUnderlyingCouponRate
+
+	// TagUnderlyingContractMultiplier - Underlying security's ContractMultiplier.
+	TagUnderlyingContractMultiplier
+
+	// TagContraTradeQty - Quantity traded with the ContraBroker (375).
+	TagContraTradeQty
+
+	// TagContraTradeTime - Identifes the time of the trade with the ContraBroker (375). (always expressed in UTC
+	// (Universal Time Coordinated, also known as 'GMT')
+	TagContraTradeTime
+
+	// TagClearingFirm - Firm that will clear the trade. Used if different from the executing firm.
+	TagClearingFirm
+
+	// TagClearingAccount - Supplemental accounting information forward to clearing house/firm.
+	TagClearingAccount
+
+	// TagLiquidityNumSecurities - Number of Securites between LiquidityPctLow (402) and LiquidityPctHigh (403) in
+	// Currency (15).
+	TagLiquidityNumSecurities
+
+	// TagMultiLegReportingType - Used to indicate what an Execution Report <35=8> represents (e.g. used with multi-leg
+	// securities, such as option strategies, spreads, etc.).
+	TagMultiLegReportingType
+
+	// TagStrikeTime - The time at which current market prices are used to determine the value of a basket.
+	TagStrikeTime
+
+	// TagListStatusText - Free format text string related to List Status <35=N>.
+	TagListStatusText
+
+	// TagEncodedListStatusTextLen - Byte length of encoded (non-ASCII characters) EncodedListStatusText (446) field.
+	TagEncodedListStatusTextLen
+
+	// TagEncodedListStatusText - Encoded (non-ASCII characters) representation of the ListStatusText (444) field in the
+	// encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should
+	// also be specified in the ListStatusText (444) field.
+	TagEncodedListStatusText
 )
