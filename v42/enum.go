@@ -331,3 +331,90 @@ const (
 	EncryptMethodPGPDESMD5 = "5" // PGP/DES-MD5 (see app note on FIX website)
 	EncryptMethodPEMDESMD5 = "6" // PEM/DES-MD5 (see app note on FIX website)
 )
+
+// CxlRejReason
+const (
+	CxlRejReasonTooLate        = "0" // Too late to cancel
+	CxlRejReasonUnknownOrder   = "1" // Unknown order
+	CxlRejReasonBrokerOption   = "2" // Broker Option
+	CxlRejReasonAlreadyPending = "3" // Order already in Pending Cancel or Pending Replace status
+)
+
+// ReportToExch
+const (
+	ReportToExchNo  = "N" // Indicates that party sending message will report trade
+	ReportToExchYes = "Y" // Indicates that party receiving message must report trade
+)
+
+// LocateReqd
+const (
+	LocateReqdNo  = "N" // Indicates the broker is not required to locate
+	LocateReqdYes = "Y" // Indicates the broker is responsible for locating the stock
+)
+
+// ForexReq
+const (
+	ForexReqNo  = "N" // Do not execute Forex after security trade
+	ForexReqYes = "Y" // Execute Forex after security trade
+)
+
+// GapFillFlag
+const (
+	GapFillFlagNo  = "N" // Sequence Reset, ignore MsgSeqNum
+	GapFillFlagYes = "Y" // Gap Fill message, MsgSeqNum field valid
+)
+
+// IOINaturalFlag
+const (
+	IOINaturalFlagNo  = "N" // Not natural
+	IOINaturalFlagYes = "Y" // Natural
+)
+
+// MiscFeeType
+const (
+	MiscFeeTypeRegulatory      = "1" // Regulatory (e.g. SEC)
+	MiscFeeTypeTax             = "2" // Tax
+	MiscFeeTypeLocalCommission = "3" // Local Commission
+	MiscFeeTypeExchangeFees    = "4" // Exchange Fees
+	MiscFeeTypeStamp           = "5" // Stamp
+	MiscFeeTypeLevy            = "6" // Levy
+	MiscFeeTypeOther           = "7" // Other
+	MiscFeeTypeMarkup          = "8" // Markup
+	MiscFeeTypeConsumptionTax  = "9" // Consumption Tax
+)
+
+// ResetSeqNumFlag
+const (
+	ResetSeqNumFlagNo  = "N" // No
+	ResetSeqNumFlagYes = "Y" // Yes, reset sequence numbers
+)
+
+// SettlInstTransType
+const (
+	SettlInstTransTypeCancel  = "C" // Cancel
+	SettlInstTransTypeNew     = "N" // New
+	SettlInstTransTypeReplace = "R" // Replace
+)
+
+// SettlLocation
+const (
+	SettlLocationCEDEL                     = "CED"              // CEDEL
+	SettlLocationDepositoryTrustCompany    = "DTC"              // Depository Trust Company
+	SettlLocationEuroclear                 = "EUR"              // Euroclear
+	SettlLocationFederalBookEntry          = "FED"              // Federal Book Entry
+	SettlLocationLocalMarketSettleLocation = "ISO Country Code" // Local Market Settle Location
+	SettlLocationPhysical                  = "PNY"              // Physical
+	SettlLocationParticipantTrustCompany   = "PTC"              // Participant Trust Company
+)
+
+// SettlDeliveryType
+const (
+	SettlDeliveryTypeVersusPayment = "0" // 'Versus. Payment': Deliver (if Sell) or Receive (if Buy) vs. (Against) Payment
+	SettlDeliveryTypeFree          = "1" // 'Free': Deliver (if Sell) or Receive (if Buy) Free
+)
+
+// AllocLinkType
+const (
+	AllocLinkTypeNetting = "0" // F/X Netting
+	AllocLinkTypeSwap    = "1" // F/X Swap
+)

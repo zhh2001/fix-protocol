@@ -260,6 +260,57 @@ func TestSideEnumValues(t *testing.T) {
 		{"EncryptMethodPGPDES", EncryptMethodPGPDES, "4"},
 		{"EncryptMethodPGPDESMD5", EncryptMethodPGPDESMD5, "5"},
 		{"EncryptMethodPEMDESMD5", EncryptMethodPEMDESMD5, "6"},
+
+		{"CxlRejReasonTooLate", CxlRejReasonTooLate, "0"},
+		{"CxlRejReasonUnknownOrder", CxlRejReasonUnknownOrder, "1"},
+		{"CxlRejReasonBrokerOption", CxlRejReasonBrokerOption, "2"},
+		{"CxlRejReasonAlreadyPending", CxlRejReasonAlreadyPending, "3"},
+
+		{"ReportToExchNo", ReportToExchNo, "N"},
+		{"ReportToExchYes", ReportToExchYes, "Y"},
+
+		{"LocateReqdNo", LocateReqdNo, "N"},
+		{"LocateReqdYes", LocateReqdYes, "Y"},
+
+		{"ForexReqNo", ForexReqNo, "N"},
+		{"ForexReqYes", ForexReqYes, "Y"},
+
+		{"GapFillFlagNo", GapFillFlagNo, "N"},
+		{"GapFillFlagYes", GapFillFlagYes, "Y"},
+
+		{"IOINaturalFlagNo", IOINaturalFlagNo, "N"},
+		{"IOINaturalFlagYes", IOINaturalFlagYes, "Y"},
+
+		{"MiscFeeTypeRegulatory", MiscFeeTypeRegulatory, "1"},
+		{"MiscFeeTypeTax", MiscFeeTypeTax, "2"},
+		{"MiscFeeTypeLocalCommission", MiscFeeTypeLocalCommission, "3"},
+		{"MiscFeeTypeExchangeFees", MiscFeeTypeExchangeFees, "4"},
+		{"MiscFeeTypeStamp", MiscFeeTypeStamp, "5"},
+		{"MiscFeeTypeLevy", MiscFeeTypeLevy, "6"},
+		{"MiscFeeTypeOther", MiscFeeTypeOther, "7"},
+		{"MiscFeeTypeMarkup", MiscFeeTypeMarkup, "8"},
+		{"MiscFeeTypeConsumptionTax", MiscFeeTypeConsumptionTax, "9"},
+
+		{"ResetSeqNumFlagNo", ResetSeqNumFlagNo, "N"},
+		{"ResetSeqNumFlagYes", ResetSeqNumFlagYes, "Y"},
+
+		{"SettlInstTransTypeCancel", SettlInstTransTypeCancel, "C"},
+		{"SettlInstTransTypeNew", SettlInstTransTypeNew, "N"},
+		{"SettlInstTransTypeReplace", SettlInstTransTypeReplace, "R"},
+
+		{"SettlLocationCEDEL", SettlLocationCEDEL, "CED"},
+		{"SettlLocationDepositoryTrustCompany", SettlLocationDepositoryTrustCompany, "DTC"},
+		{"SettlLocationEuroclear", SettlLocationEuroclear, "EUR"},
+		{"SettlLocationFederalBookEntry", SettlLocationFederalBookEntry, "FED"},
+		{"SettlLocationLocalMarketSettleLocation", SettlLocationLocalMarketSettleLocation, "ISO Country Code"},
+		{"SettlLocationPhysical", SettlLocationPhysical, "PNY"},
+		{"SettlLocationParticipantTrustCompany", SettlLocationParticipantTrustCompany, "PTC"},
+
+		{"SettlDeliveryTypeVersusPayment", SettlDeliveryTypeVersusPayment, "0"},
+		{"SettlDeliveryTypeFree", SettlDeliveryTypeFree, "1"},
+
+		{"AllocLinkTypeNetting", AllocLinkTypeNetting, "0"},
+		{"AllocLinkTypeSwap", AllocLinkTypeSwap, "1"},
 	}
 
 	// Run each test case
