@@ -1,3 +1,7 @@
+// Copyright 2025 Henghua Zhang. All rights reserved.
+// Use of this source code is governed by a MIT style
+// license that can be found in the LICENSE file.
+
 package fields
 
 const (
@@ -1127,4 +1131,174 @@ const (
 	// the SendingTime (52) on the message A sent to Q. (always expressed in UTC (Universal Time Coordinated, also known
 	// as 'GMT')
 	TagOnBehalfOfSendingTime
+
+	// TagRefTagID - The tag number of the FIX field being referenced.
+	TagRefTagID
+
+	// TagRefMsgType - The MsgType (35) of the FIX message being referenced.
+	TagRefMsgType
+
+	// TagSessionRejectReason - Code to identify reason for a session-level Reject <35=3> message.
+	TagSessionRejectReason
+
+	// TagBidRequestTransType - Identifies the Bid Request <35=k> message type.
+	TagBidRequestTransType
+
+	// TagContraBroker - Identifies contra broker. Standard NASD market-maker mnemonic is preferred.
+	TagContraBroker
+
+	// TagComplianceID - ID used to represent this transaction for compliance purposes (e.g. OATS reporting).
+	TagComplianceID
+
+	// TagSolicitedFlag - Indicates whether the order was solicited.
+	TagSolicitedFlag
+
+	// TagExecRestatementReason - Code to identify reason for an ExecutionRpt message sent with ExecType (150)=Restated
+	// or used when communicating an unsolicited cancel.
+	TagExecRestatementReason
+
+	// TagBusinessRejectRefID - The value of the business-level 'ID' field on the message being referenced.
+	TagBusinessRejectRefID
+
+	// TagBusinessRejectReason - Code to identify reason for a Business Message Reject <35=j> message.
+	TagBusinessRejectReason
+
+	// TagGrossTradeAmt - Total amount traded (e.g. CumQty (14) * AvgPx (6)) expressed in units of currency.
+	TagGrossTradeAmt
+
+	// TagNoContraBrokers - The number of ContraBroker (375) entries.
+	TagNoContraBrokers
+
+	// TagMaxMessageSize - Maximum number of bytes supported for a single message.
+	TagMaxMessageSize
+
+	// TagNoMsgTypes - Number of MsgType (35) in repeating group.
+	TagNoMsgTypes
+
+	// TagMsgDirection - Specifies the direction of the message.
+	TagMsgDirection
+
+	// TagNoTradingSessions - Number of TradingSessionID (336) in repeating group.
+	TagNoTradingSessions
+
+	// TagTotalVolumeTraded - Total volume (quantity) traded.
+	TagTotalVolumeTraded
+
+	// TagDiscretionInst - Code to identify the price a DiscretionOffset (389) is related to and should be
+	// mathematically added to.
+	TagDiscretionInst
+
+	// TagDiscretionOffset - Amount (signed) added to the 'related to' price specified via DiscretionInst (388).
+	TagDiscretionOffset
+
+	// TagBidID - Unique identifier for Bid Response <35=l> as assigned by broker. Uniqueness must be guaranteed within
+	// a single trading day.
+	TagBidID
+
+	// TagClientBidID - Unique identifier for a Bid Request <35=k> as assigned by institution. Uniqueness must be
+	// guaranteed within a single trading day.
+	TagClientBidID
+
+	// TagListName - Descriptive name for list order.
+	TagListName
+
+	// TagTotalNumSecurities - Total number of securities.
+	TagTotalNumSecurities
+
+	// TagBidType - Code to identify the type of Bid Request <35=k>.
+	TagBidType
+
+	// TagNumTickets - Total number of tickets.
+	TagNumTickets
+
+	// TagSideValue1 - Amounts in currency
+	TagSideValue1
+
+	// TagSideValue2 - Amounts in currency
+	TagSideValue2
+
+	// TagNoBidDescriptors - Number of BidDescriptor (400) entries.
+	TagNoBidDescriptors
+
+	// TagBidDescriptorType - Code to identify the type of BidDescriptor (400).
+	TagBidDescriptorType
+
+	// TagBidDescriptor - BidDescriptor value. Usage depends upon BidDescriptorType (399).
+	//
+	// If BidDescriptorType = 1
+	//
+	// Industrials etc. - Free text
+	//
+	// If BidDescriptorType = 2
+	//
+	// "FR" etc. - ISO Country (421) Codes
+	//
+	// If BidDescriptorType = 3
+	//
+	// FT100, FT250, STOX - Free text
+	TagBidDescriptor
+
+	// TagSideValueInd - Code to identify which "SideValue" the value refers to. SideValue1 (396) and SideValue2 (397)
+	// are used as opposed to Buy or Sell so that the basket can be quoted either way as Buy or Sell.
+	TagSideValueInd
+
+	// TagLiquidityPctLow - Liquidity indicator or lower limit if TotalNumSecurities (393) > 1. Represented as a
+	// percentage.
+	TagLiquidityPctLow
+
+	// TagLiquidityPctHigh - Upper liquidity indicator if TotalNumSecurities (393) > 1. Represented as a percentage.
+	TagLiquidityPctHigh
+
+	// TagLiquidityValue - Value between LiquidityPctLow (402) and LiquidityPctHigh (403) in Currency (15)
+	TagLiquidityValue
+
+	// TagEFPTrackingError - Eg Used in EFP trades 12% (EFP - Exchange for Physical ). Represented as a percentage.
+	TagEFPTrackingError
+
+	// TagFairValue - Used in EFP trades
+	TagFairValue
+
+	// TagOutsideIndexPct - Used in EFP trades. Represented as a percentage.
+	TagOutsideIndexPct
+
+	// TagValueOfFutures - Used in EFP trades
+	TagValueOfFutures
+
+	// TagLiquidityIndType - Code to identify the type of liquidity indicator.
+	TagLiquidityIndType
+
+	// TagWtAverageLiquidity - Overall weighted average liquidity expressed as a % of average daily volume. Represented
+	// as a percentage.
+	TagWtAverageLiquidity
+
+	// TagExchangeForPhysical - Indicates whether to exchange for physical.
+	TagExchangeForPhysical
+
+	// TagOutMainCntryUIndex - Value of stocks in Currency (15)
+	TagOutMainCntryUIndex
+
+	// TagCrossPercent - Percentage of program that crosses in Currency (15). Represented as a percentage.
+	TagCrossPercent
+
+	// TagProgRptReqs - Code to identify the desired frequency of progress reports.
+	TagProgRptReqs
+
+	// TagProgPeriodInterval - Time in minutes between each List Status <35=N> report sent by SellSide. Zero means don't
+	// send status.
+	TagProgPeriodInterval
+
+	// TagIncTaxInd - Code to represent whether value is net (inclusive of tax) or gross.
+	TagIncTaxInd
+
+	// TagNumBidders - Indicates the total number of bidders on the list
+	TagNumBidders
+
+	// TagTradeType - Code to represent the type of trade.
+	TagTradeType
+
+	// TagBasisPxType - Code to represent the basis price type.
+	TagBasisPxType
+
+	// TagNoBidComponents - Indicates the number of list entries.
+	TagNoBidComponents
 )

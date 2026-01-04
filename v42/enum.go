@@ -1,3 +1,7 @@
+// Copyright 2025 Henghua Zhang. All rights reserved.
+// Use of this source code is governed by a MIT style
+// license that can be found in the LICENSE file.
+
 package fields
 
 const BeginStringFIX42 = "FIX.4.2"
