@@ -24,7 +24,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/zhh2001/fix-protocol/v42/fields"
+	fields "github.com/zhh2001/fix-protocol/v42"
 )
 
 func main() {
@@ -45,7 +45,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/zhh2001/fix-protocol/v42/fields"
+	fields "github.com/zhh2001/fix-protocol/v42"
 )
 
 func main() {
@@ -63,12 +63,48 @@ func main() {
 }
 ```
 
+### Reverse Lookup and Typed Tag
+
+The package also exposes a typed `Tag` with bidirectional lookups — useful
+for FIX parsers, loggers, and validators that need to turn raw wire numbers
+or human-authored field names into semantic identifiers.
+
+```go
+package main
+
+import (
+	"fmt"
+
+	fields "github.com/zhh2001/fix-protocol/v42"
+)
+
+func main() {
+	// Look up a tag by wire number; the second value distinguishes dictionary
+	// fields from user-defined/vendor-extension tags.
+	if tag, ok := fields.TagByNumber(35); ok {
+		fmt.Println(tag)        // MsgType(35)
+		fmt.Println(tag.Name()) // MsgType
+	}
+
+	// Look up a tag by its canonical FIX name (case-sensitive).
+	if tag, ok := fields.TagByName("OrderQty"); ok {
+		fmt.Println(tag.Int()) // 38
+	}
+
+	// An unknown tag still stringifies to its numeric form so logs don't drop
+	// information on custom fields.
+	fmt.Println(fields.Tag(5001)) // 5001
+}
+```
+
 ## Core File Explanation
 
-| File      | Responsibility                                                                                                                                 |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `tag.go`  | Defines FIX protocol field tags as `iota` constants (numeric values), with detailed comments for each field.                                   |
-| `enum.go` | Defines common FIX protocol enumeration values as string constants, covering transaction sides, execution instructions, commission types, etc. |
+| File              | Responsibility                                                                                                                                 |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `tag.go`          | Defines FIX protocol field tags as `iota` constants (numeric values), with detailed comments for each field.                                   |
+| `enum.go`         | Defines common FIX protocol enumeration values as string constants, covering transaction sides, execution instructions, commission types, etc. |
+| `field.go`        | Declares the `Tag` type and lookup helpers (`TagByName`, `TagByNumber`, `AllTags`).                                                            |
+| `field_names.go`  | Generated name/number lookup tables. Regenerate with `go generate ./...` after editing `tag.go`.                                               |
 
 ## Advantages
 

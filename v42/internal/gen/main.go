@@ -1,0 +1,189 @@
+// Copyright 2025 Henghua Zhang. All rights reserved.
+// Use of this source code is governed by a MIT style
+// license that can be found in the LICENSE file.
+
+// Command gen parses tag.go and produces field_names.go containing
+// bidirectional lookup maps between FIX 4.2 tag numbers and their canonical
+// field names. It is invoked via `go generate` from the fields package.
+//
+// The generator is intentionally self-contained and has no third-party
+// dependencies so it runs under a stock Go toolchain.
+package main
+
+import (
+	"bytes"
+	"flag"
+	"fmt"
+	"go/ast"
+	"go/format"
+	"go/parser"
+	"go/token"
+	"os"
+	"sort"
+	"strconv"
+	"strings"
+)
+
+type entry struct {
+	Tag  int
+	Name string
+}
+
+func main() {
+	in := flag.String("in", "tag.go", "input Go source declaring TagXxx constants")
+	out := flag.String("out", "field_names.go", "output file for generated lookup tables")
+	pkg := flag.String("pkg", "fields", "package name for the generated file")
+	flag.Parse()
+
+	entries, err := collect(*in)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "gen:", err)
+		os.Exit(1)
+	}
+
+	src, err := render(*pkg, entries)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "gen:", err)
+		os.Exit(1)
+	}
+
+	if err := os.WriteFile(*out, src, 0o644); err != nil {
+		fmt.Fprintln(os.Stderr, "gen:", err)
+		os.Exit(1)
+	}
+}
+
+// collect walks the const block in path and assigns a FIX tag number to each
+// named identifier. It tracks iota by ConstSpec index (per the Go spec) and
+// evaluates `iota + N` initializers, updating the inherited offset whenever a
+// spec re-states its expression. Blank identifiers consume a slot without
+// producing an entry, which is how reserved/retired FIX tags are represented.
+func collect(path string) ([]entry, error) {
+	fset := token.NewFileSet()
+	file, err := parser.ParseFile(fset, path, nil, parser.ParseComments)
+	if err != nil {
+		return nil, err
+	}
+
+	var entries []entry
+	foundBlock := false
+
+	for _, decl := range file.Decls {
+		gd, ok := decl.(*ast.GenDecl)
+		if !ok || gd.Tok != token.CONST {
+			continue
+		}
+		if foundBlock {
+			return nil, fmt.Errorf("%s: expected exactly one const block, found more than one", path)
+		}
+		foundBlock = true
+
+		iotaIdx := 0
+		// offset defaults to 0; the first spec must carry an explicit `iota + N`
+		// initializer so this is overwritten before first use.
+		offset := 0
+		offsetInitialized := false
+
+		for _, spec := range gd.Specs {
+			vs, ok := spec.(*ast.ValueSpec)
+			if !ok {
+				continue
+			}
+			if len(vs.Values) > 0 {
+				if len(vs.Values) != 1 {
+					return nil, fmt.Errorf("%s: spec %v: expected exactly one initializer expression, got %d", path, vs.Names, len(vs.Values))
+				}
+				off, err := parseIotaOffset(vs.Values[0])
+				if err != nil {
+					return nil, fmt.Errorf("%s: spec %v: %w", path, vs.Names, err)
+				}
+				offset = off
+				offsetInitialized = true
+			}
+			if !offsetInitialized {
+				return nil, fmt.Errorf("%s: spec %v: initializer missing on leading ConstSpec", path, vs.Names)
+			}
+			for _, n := range vs.Names {
+				value := iotaIdx + offset
+				if n.Name == "_" {
+					continue
+				}
+				if !strings.HasPrefix(n.Name, "Tag") {
+					return nil, fmt.Errorf("%s: unexpected identifier %q in tag const block", path, n.Name)
+				}
+				entries = append(entries, entry{
+					Tag:  value,
+					Name: strings.TrimPrefix(n.Name, "Tag"),
+				})
+			}
+			iotaIdx++
+		}
+	}
+
+	if !foundBlock {
+		return nil, fmt.Errorf("%s: no const block found", path)
+	}
+
+	sort.Slice(entries, func(i, j int) bool { return entries[i].Tag < entries[j].Tag })
+
+	seenTag := make(map[int]string, len(entries))
+	seenName := make(map[string]int, len(entries))
+	for _, e := range entries {
+		if prev, dup := seenName[e.Name]; dup {
+			return nil, fmt.Errorf("duplicate field name %q (tags %d and %d)", e.Name, prev, e.Tag)
+		}
+		if prev, dup := seenTag[e.Tag]; dup {
+			return nil, fmt.Errorf("duplicate tag number %d (names %q and %q)", e.Tag, prev, e.Name)
+		}
+		seenName[e.Name] = e.Tag
+		seenTag[e.Tag] = e.Name
+	}
+
+	return entries, nil
+}
+
+// parseIotaOffset evaluates an expression of the form `iota + N` and returns N
+// as an int. Any other shape is rejected so surprising source changes surface
+// loudly rather than silently corrupting tag numbers.
+func parseIotaOffset(expr ast.Expr) (int, error) {
+	be, ok := expr.(*ast.BinaryExpr)
+	if !ok || be.Op != token.ADD {
+		return 0, fmt.Errorf("expected `iota + N`, got %T", expr)
+	}
+	left, ok := be.X.(*ast.Ident)
+	if !ok || left.Name != "iota" {
+		return 0, fmt.Errorf("left operand of + must be the identifier iota")
+	}
+	right, ok := be.Y.(*ast.BasicLit)
+	if !ok || right.Kind != token.INT {
+		return 0, fmt.Errorf("right operand of + must be an int literal")
+	}
+	n, err := strconv.Atoi(right.Value)
+	if err != nil {
+		return 0, fmt.Errorf("int literal %q: %w", right.Value, err)
+	}
+	return n, nil
+}
+
+func render(pkg string, entries []entry) ([]byte, error) {
+	var buf bytes.Buffer
+	buf.WriteString("// Code generated by internal/gen. DO NOT EDIT.\n\n")
+	fmt.Fprintf(&buf, "package %s\n\n", pkg)
+
+	fmt.Fprintf(&buf, "// tagNames maps FIX 4.2 tag numbers to their canonical field names.\n")
+	fmt.Fprintf(&buf, "// Generated from tag.go; %d entries.\n", len(entries))
+	buf.WriteString("var tagNames = map[Tag]string{\n")
+	for _, e := range entries {
+		fmt.Fprintf(&buf, "\t%d: %q,\n", e.Tag, e.Name)
+	}
+	buf.WriteString("}\n\n")
+
+	buf.WriteString("// tagsByName is the inverse of tagNames for O(1) name → Tag lookup.\n")
+	buf.WriteString("var tagsByName = map[string]Tag{\n")
+	for _, e := range entries {
+		fmt.Fprintf(&buf, "\t%q: %d,\n", e.Name, e.Tag)
+	}
+	buf.WriteString("}\n")
+
+	return format.Source(buf.Bytes())
+}
